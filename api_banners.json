@@ -1,0 +1,25 @@
+﻿{
+    "ok":  true,
+    "banners":  [
+                    {
+                        "id":  "banner-brasil",
+                        "eyebrow":  "",
+                        "title":  "Banner 3",
+                        "subtitle":  "",
+                        "linkUrl":  "/produtos?categoria=Brasil",
+                        "linkText":  "",
+                        "desktopImage":  "/assets/uploads/upload-1779826670378-e1ee82ca-fc83-4c2b-b23f-53c63edefeb8.webp",
+                        "mobileImage":  "/assets/uploads/upload-1779826673533-5c78782c-122f-4233-a994-dafb4d41ace8.webp"
+                    },
+                    {
+                        "id":  "banner-4",
+                        "eyebrow":  "",
+                        "title":  "Banner 3",
+                        "subtitle":  "",
+                        "linkUrl":  "",
+                        "linkText":  "",
+                        "desktopImage":  "/assets/uploads/upload-1779826688786-97093298-4460-426b-b1a7-6b765fd291b1.webp",
+                        "mobileImage":  "/assets/uploads/upload-1779826692443-f8e5a7c9-4c92-4fbb-89c6-2135d1f64d5f.webp"
+                    }
+                ]
+}

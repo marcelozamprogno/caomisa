@@ -1,0 +1,14 @@
+﻿{
+    "ok":  true,
+    "siteContent":  {
+                        "lowerBanner":  {
+                                            "linkUrl":  "/produtos?categoria=Inverno",
+                                            "desktopImage":  "/assets/uploads/upload-1779826697817-a172cb8e-da91-4762-8e89-2312d2262625.webp",
+                                            "mobileImage":  "/assets/uploads/upload-1779826701305-5e65dc27-27da-43a8-919f-bcf3448cfd10.webp"
+                                        },
+                        "aboutPhotos":  {
+                                            "photoOne":  "/assets/uploads/upload-1779826706357-58c2d552-2478-469c-9020-25c715eee76b.webp",
+                                            "photoTwo":  "/assets/uploads/upload-1779826709107-12270046-d2d7-43f2-a37a-93f7b2424f3c.webp"
+                                        }
+                    }
+}

@@ -1,0 +1,55 @@
+﻿{
+    "ok":  true,
+    "collections":  [
+                        {
+                            "id":  "camisas",
+                            "name":  "Camisas",
+                            "image":  "/assets/uploads/upload-1779825375403-7e8c544e-8b11-411a-bab6-9043e1f46a50.webp",
+                            "sourceCategory":  "Camisas",
+                            "productIds":  [
+
+                                           ],
+                            "sortOrder":  0
+                        },
+                        {
+                            "id":  "casacos",
+                            "name":  "Casacos",
+                            "image":  "/assets/uploads/upload-1779826564857-c1857a0e-1270-46b8-afd7-a6ddb96cae11.webp",
+                            "sourceCategory":  "Casacos",
+                            "productIds":  [
+
+                                           ],
+                            "sortOrder":  1
+                        },
+                        {
+                            "id":  "brasil",
+                            "name":  "Brasil",
+                            "image":  "/assets/uploads/upload-1779826588024-e431cce5-330e-4a15-8b31-edf68d0718bc.webp",
+                            "sourceCategory":  "Brasil",
+                            "productIds":  [
+
+                                           ],
+                            "sortOrder":  2
+                        },
+                        {
+                            "id":  "passeio",
+                            "name":  "Filmes",
+                            "image":  "/assets/uploads/upload-1779826606234-9781b3c0-abed-44ff-b0a5-69f9ff96692a.webp",
+                            "sourceCategory":  "Filmes",
+                            "productIds":  [
+
+                                           ],
+                            "sortOrder":  3
+                        },
+                        {
+                            "id":  "kits",
+                            "name":  "Acessórios",
+                            "image":  "/assets/uploads/upload-1779826627991-b051b023-bf49-497c-83a6-55f6478a49b3.webp",
+                            "sourceCategory":  "Acessórios",
+                            "productIds":  [
+
+                                           ],
+                            "sortOrder":  4
+                        }
+                    ]
+}
