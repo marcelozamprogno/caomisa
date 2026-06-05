@@ -58,23 +58,23 @@ while ($listener.IsListening) {
             $contentType = $mimeTypes[".json"]
             $isJson = $true
         }
-        elif ($localPath -eq "/api/banners") {
+        elseif ($localPath -eq "/api/banners") {
             $fileToServe = Join-Path $workspaceDir "api_banners.json"
             $contentType = $mimeTypes[".json"]
             $isJson = $true
         }
-        elif ($localPath -eq "/api/site-content") {
+        elseif ($localPath -eq "/api/site-content") {
             $fileToServe = Join-Path $workspaceDir "api_site_content.json"
             $contentType = $mimeTypes[".json"]
             $isJson = $true
         }
-        elif ($localPath -eq "/api/collections") {
+        elseif ($localPath -eq "/api/collections") {
             $fileToServe = Join-Path $workspaceDir "api_collections.json"
             $contentType = $mimeTypes[".json"]
             $isJson = $true
         }
         # Mock any review posts or checkout posts to avoid frontend error
-        elif ($localPath -like "/api/*") {
+        elseif ($localPath -like "/api/*") {
             $responseBytes = [System.Text.Encoding]::UTF8.GetBytes('{"ok":true,"message":"Mocked API success"}')
             $response.StatusCode = 200
             $response.ContentType = $mimeTypes[".json"]
@@ -85,7 +85,7 @@ while ($listener.IsListening) {
         }
         # 2. SPA Front-end Routing
         # If accessing the home page, or routes that don't have file extensions (SPA routes like /produtos, /ajuda, /produto/...)
-        elif ($localPath -eq "/" -or $localPath -eq "/index.html" -or $localPath -eq "/produtos" -or $localPath -eq "/ajuda" -or $localPath -eq "/politicas" -or $localPath.StartsWith("/produto/")) {
+        elseif ($localPath -eq "/" -or $localPath -eq "/index.html" -or $localPath -eq "/produtos" -or $localPath -eq "/ajuda" -or $localPath -eq "/politicas" -or $localPath.StartsWith("/produto/")) {
             $fileToServe = Join-Path $workspaceDir "index.html"
             $contentType = $mimeTypes[".html"]
         }
