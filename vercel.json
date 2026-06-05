@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/products", "destination": "/api_products.json" },
+    { "source": "/api/banners", "destination": "/api_banners.json" },
+    { "source": "/api/site-content", "destination": "/api_site_content.json" },
+    { "source": "/api/collections", "destination": "/api_collections.json" },
+    { "source": "/produtos", "destination": "/index.html" },
+    { "source": "/ajuda", "destination": "/index.html" },
+    { "source": "/politicas", "destination": "/index.html" },
+    { "source": "/produto/:path*", "destination": "/index.html" }
+  ]
+}

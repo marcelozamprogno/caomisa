@@ -1,0 +1,8 @@
+/api/products      /api_products.json      200
+/api/banners       /api_banners.json       200
+/api/site-content  /api_site_content.json  200
+/api/collections   /api_collections.json   200
+/produtos          /index.html             200
+/ajuda             /index.html             200
+/politicas         /index.html             200
+/produto/*         /index.html             200
