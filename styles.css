@@ -44,8 +44,7 @@
 }
 
 [hidden],
-.zoom-modal[hidden],
-.size-guide-modal[hidden] {
+.zoom-modal[hidden] {
   display: none !important;
 }
 
@@ -66,8 +65,7 @@ body {
 }
 
 body.cart-open,
-body.zoom-open,
-body.size-guide-open {
+body.zoom-open {
   overflow: hidden;
 }
 
@@ -1066,16 +1064,7 @@ a {
   text-decoration: line-through;
 }
 
-.size-guide-trigger {
-  align-self: flex-start;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--brand-primary);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 4px;
-}
+
 
 /* Custom Jersey Fields */
 .customization-box {
@@ -1560,9 +1549,8 @@ a {
   transform: translateY(0);
 }
 
-/* --- Modals (Zoom & Size Guide) --- */
-.zoom-modal,
-.size-guide-modal {
+/* --- Modals (Zoom) --- */
+.zoom-modal {
   position: fixed;
   inset: 0;
   z-index: 100;
@@ -1571,8 +1559,7 @@ a {
   padding: 20px;
 }
 
-.zoom-modal-backdrop,
-.size-guide-backdrop {
+.zoom-modal-backdrop {
   position: absolute;
   inset: 0;
   background: rgba(0, 11, 47, 0.6);
@@ -1595,44 +1582,7 @@ a {
   object-fit: contain;
 }
 
-.size-guide-content {
-  position: relative;
-  z-index: 2;
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 30px;
-  max-width: 700px;
-  width: 100%;
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.size-guide-content h3 {
-  font-size: 1.3rem;
-  color: var(--brand-secondary);
-  font-weight: 800;
-}
-
-.size-guide-content p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.size-guide-images {
-  border-top: 1px solid var(--line);
-  padding-top: 16px;
-  overflow-y: auto;
-  max-height: 50vh;
-}
-
-.size-guide-mobile-img {
-  display: none;
-}
-
-.zoom-close-btn,
-.size-guide-close-btn {
+.zoom-close-btn {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -1641,8 +1591,7 @@ a {
   z-index: 5;
 }
 
-.zoom-close-btn:hover,
-.size-guide-close-btn:hover {
+.zoom-close-btn:hover {
   background: rgba(0,0,0,0.1);
 }
 
@@ -1843,14 +1792,7 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .size-guide-desktop-img {
-    display: none;
-  }
-  
-  .size-guide-mobile-img {
-    display: block;
-    width: 100%;
-  }
+
 }
 
 @media (max-width: 480px) {

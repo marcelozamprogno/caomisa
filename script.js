@@ -426,7 +426,7 @@ function renderProductPage(slug) {
           </div>
         </div>
         
-        <!-- Size Selector -->
+          <!-- Size Selector -->
         <div class="option-selector-group">
           <div class="option-selector-label">Tamanho do Pet</div>
           <div class="size-options">
@@ -434,9 +434,6 @@ function renderProductPage(slug) {
               <button type="button" class="size-pill ${idx === 0 ? "active" : ""}" data-size="${sz}">${sz}</button>
             `).join("")}
           </div>
-          <button type="button" class="size-guide-trigger" data-size-guide-trigger>
-            <i data-lucide="ruler" aria-hidden="true"></i> Tabela de Medidas
-          </button>
         </div>
         
         <!-- Customization Fields -->
@@ -599,20 +596,7 @@ function renderProductPage(slug) {
     });
   }
   
-  // Size Guide Modal
-  const sizeGuideBtn = container.querySelector("[data-size-guide-trigger]");
-  const sizeGuideModal = document.querySelector("[data-size-guide-modal]");
-  const dGuide = document.querySelector("[data-size-guide-desktop]");
-  const mGuide = document.querySelector("[data-size-guide-mobile]");
-  
-  if (sizeGuideBtn && sizeGuideModal && dGuide && mGuide) {
-    sizeGuideBtn.addEventListener("click", () => {
-      dGuide.src = product.premium?.sizeGuideDesktopImage || "/assets/uploads/upload-1779908476553-05998592-31b1-400f-acac-a2887f9faaf1.webp";
-      mGuide.src = product.premium?.sizeGuideMobileImage || product.premium?.sizeGuideDesktopImage || "/assets/uploads/upload-1779908483009-ce7cd904-2c9a-4d09-a626-a88cc9d008e3.webp";
-      sizeGuideModal.hidden = false;
-      document.body.classList.add("size-guide-open");
-    });
-  }
+
   
   // Accordion details toggle
   const accs = container.querySelectorAll(".accordion-item");
@@ -925,15 +909,6 @@ function bindEvents() {
   
   // Global Modals closure using delegation
   document.addEventListener("click", (e) => {
-    const sizeGuideClose = e.target.closest("[data-size-guide-close]");
-    if (sizeGuideClose) {
-      const sizeGuideModal = document.querySelector("[data-size-guide-modal]");
-      if (sizeGuideModal) {
-        sizeGuideModal.hidden = true;
-        document.body.classList.remove("size-guide-open");
-      }
-    }
-    
     const zoomClose = e.target.closest("[data-zoom-close]");
     if (zoomClose) {
       const zoomModal = document.querySelector("[data-zoom-modal]");

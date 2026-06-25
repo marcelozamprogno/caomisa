@@ -41,9 +41,9 @@ fbq('track', 'PageView');
     /></noscript>
     <!-- End Meta Pixel Code -->
     
-    <link rel="icon" type="image/webp" href="assets/favicon-caomisa-paw.webp?v=20260525" />
-    <link rel="preload" href="assets/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/webp" href="/assets/favicon-caomisa-paw.webp?v=20260525" />
+    <link rel="preload" href="/assets/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <!-- Top announcement strip -->
@@ -69,7 +69,7 @@ fbq('track', 'PageView');
         </button>
 
         <a class="brand" href="/" aria-label="Caomisa início">
-          <img src="assets/logocaomisa.webp" alt="Caomisa" />
+          <img src="/assets/logocaomisa.webp" alt="Caomisa" />
         </a>
 
         <button class="cart-button" type="button" data-cart-open aria-label="Abrir carrinho">
@@ -292,27 +292,12 @@ fbq('track', 'PageView');
       </div>
     </div>
 
-    <!-- Size Guide Modal -->
-    <div class="size-guide-modal" data-size-guide-modal hidden>
-      <div class="size-guide-backdrop" data-size-guide-close onclick="document.querySelector('[data-size-guide-modal]').hidden = true; document.body.classList.remove('size-guide-open');"></div>
-      <div class="size-guide-content">
-        <button class="icon-button size-guide-close-btn" type="button" data-size-guide-close aria-label="Fechar guia" onclick="document.querySelector('[data-size-guide-modal]').hidden = true; document.body.classList.remove('size-guide-open');">
-          <i data-lucide="x" aria-hidden="true">&times;</i>
-        </button>
-        <h3>Guia de Medidas</h3>
-        <p>Compare as medidas do seu pet com a tabela abaixo para escolher o tamanho correto:</p>
-        <div class="size-guide-images">
-          <img data-size-guide-desktop src="" alt="Tabela de Medidas Desktop" class="size-guide-desktop-img" />
-          <img data-size-guide-mobile src="" alt="Tabela de Medidas Mobile" class="size-guide-mobile-img" />
-        </div>
-      </div>
-    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-col footer-brand-col">
-          <img class="footer-logo" src="assets/logocaomisa.webp" alt="Caomisa" />
+          <img class="footer-logo" src="/assets/logocaomisa.webp" alt="Caomisa" />
           <p>Roupas e acessórios para pets, feitos para unir conforto, estilo e praticidade no dia a dia.</p>
           <div class="footer-socials" aria-label="Redes sociais">
             <a class="footer-social-icon instagram-icon" href="https://www.instagram.com/lojacaomisa" target="_blank" rel="noopener noreferrer" aria-label="Instagram @lojacaomisa"></a>
@@ -340,7 +325,7 @@ fbq('track', 'PageView');
     </footer>
 
     <!-- Scripts -->
-    <script defer src="assets/lucide.min.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="/assets/lucide.min.js"></script>
+    <script defer src="/script.js"></script>
   </body>
 </html>

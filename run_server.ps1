@@ -85,7 +85,7 @@ while ($listener.IsListening) {
         }
         # 2. SPA Front-end Routing
         # If accessing the home page, or routes that don't have file extensions (SPA routes like /produtos, /ajuda, /produto/...)
-        elseif ($localPath -eq "/" -or $localPath -eq "/index.html" -or $localPath -eq "/produtos" -or $localPath -eq "/ajuda" -or $localPath -eq "/politicas" -or $localPath.StartsWith("/produto/")) {
+        elseif (([System.IO.Path]::GetExtension($localPath) -eq "" -or [System.IO.Path]::GetExtension($localPath).ToLower() -eq ".html") -and ($localPath -eq "/" -or $localPath -eq "/index.html" -or $localPath -eq "/produtos" -or $localPath -eq "/ajuda" -or $localPath -eq "/politicas" -or $localPath.StartsWith("/produto/"))) {
             $fileToServe = Join-Path $workspaceDir "index.html"
             $contentType = $mimeTypes[".html"]
         }
