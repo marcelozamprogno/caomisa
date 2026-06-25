@@ -1368,11 +1368,17 @@ async function handlePaymentSubmit() {
       body: JSON.stringify(payload)
     });
 
-    const data = await response.json();
+    let data;
+    try {
+      data = await response.json();
+    } catch (parseErr) {
+      showToast(`Erro Vercel: Rota /api/pix retornou status ${response.status}.`);
+      return;
+    }
 
     if (!response.ok || !data.success) {
       console.error("Erro da API Invictus:", data);
-      showToast("Erro ao gerar Pix. Verifique a configuração da Invictus Pay no Console.");
+      showToast(`Invictus Pay rejeitou: ${data.details?.message || data.error || 'Verifique o Token'}`);
       return;
     }
 
@@ -1474,8 +1480,8 @@ async function handlePaymentSubmit() {
     });
 
   } catch (err) {
-    console.error("Erro no fetch para API Pix:", err);
-    showToast("Falha de comunicação com o servidor.");
+    console.error("Erro Fatal no fetch:", err);
+    showToast(`Erro de Conexão: ${err.message}`);
   }
 }
 
