@@ -576,6 +576,12 @@ a {
   z-index: 2;
 }
 
+.product-card-badge.badge-custom {
+  background: var(--brand-secondary);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
 .product-card-image {
   aspect-ratio: 1;
   overflow: hidden;

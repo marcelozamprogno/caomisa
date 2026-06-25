@@ -50,10 +50,10 @@ fbq('track', 'PageView');
     <div class="top-strip">
       <div class="promo-marquee" aria-label="Promoção">
         <div class="promo-marquee-group">
-          <span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Frete grátis para todo o Brasil</span><i data-lucide="paw-print" aria-hidden="true"></i><span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Frete grátis para todo o Brasil</span><i data-lucide="paw-print" aria-hidden="true"></i>
+          <span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Entrega via Correios PAC e SEDEX</span><i data-lucide="paw-print" aria-hidden="true"></i><span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Frete grátis para todo o Brasil</span><i data-lucide="paw-print" aria-hidden="true"></i>
         </div>
         <div class="promo-marquee-group" aria-hidden="true">
-          <span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Frete grátis para todo o Brasil</span><i data-lucide="paw-print" aria-hidden="true"></i><span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Frete grátis para todo o Brasil</span><i data-lucide="paw-print" aria-hidden="true"></i>
+          <span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Entrega via Correios PAC e SEDEX</span><i data-lucide="paw-print" aria-hidden="true"></i><span>60% em todo site hoje</span><i data-lucide="paw-print" aria-hidden="true"></i><span>Frete grátis para todo o Brasil</span><i data-lucide="paw-print" aria-hidden="true"></i>
         </div>
       </div>
     </div>
@@ -256,17 +256,37 @@ fbq('track', 'PageView');
                   </div>
                 </div>
 
-                <div class="shipping-options-box">
-                  <h4>Opção de Envio</h4>
-                  <div class="shipping-option-card active">
-                    <div class="shipping-option-info">
-                      <i data-lucide="truck" aria-hidden="true"></i>
-                      <div>
-                        <strong>Frete Expresso Caomisa</strong>
-                        <span>Entrega com rastreamento prioritário (5 a 10 dias úteis)</span>
+                <div class="shipping-options-container" style="margin-bottom: 24px;">
+                  <div id="shipping-placeholder" style="padding: 16px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--text-muted);">
+                    <i data-lucide="map-pin" aria-hidden="true" style="margin-bottom: 8px;"></i>
+                    <p style="margin: 0; font-size: 0.95rem;">Digite seu CEP para ver as opções de envio.</p>
+                  </div>
+
+                  <div class="shipping-options-box" id="shipping-options-box" style="display: none;">
+                    <h4 style="display: flex; align-items: center; gap: 8px;">
+                      <img src="https://logodownload.org/wp-content/uploads/2014/05/correios-logo-1-1.png" alt="Correios Logo" style="height: 20px; object-fit: contain;">
+                      Correios - Opções de Envio
+                    </h4>
+                    <div class="shipping-option-card active" data-price="13.24" data-type="PAC" onclick="selectShipping(this)" style="cursor: pointer; transition: all 0.2s;">
+                      <div class="shipping-option-info">
+                        <i data-lucide="package" aria-hidden="true"></i>
+                        <div>
+                          <strong>PAC</strong>
+                          <span>Entrega de 4 a 6 dias úteis</span>
+                        </div>
                       </div>
+                      <span class="shipping-price">R$ 13,24</span>
                     </div>
-                    <span class="shipping-price">GRÁTIS</span>
+                    <div class="shipping-option-card" data-price="21.79" data-type="SEDEX" onclick="selectShipping(this)" style="cursor: pointer; transition: all 0.2s; margin-top: 10px;">
+                      <div class="shipping-option-info">
+                        <i data-lucide="truck-fast" aria-hidden="true"></i>
+                        <div>
+                          <strong>SEDEX</strong>
+                          <span>Entrega de 2 a 4 dias úteis</span>
+                        </div>
+                      </div>
+                      <span class="shipping-price">R$ 21,79</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -332,7 +352,7 @@ fbq('track', 'PageView');
                   </div>
                   <div class="summary-line">
                     <span>Frete</span>
-                    <span class="free-badge">GRÁTIS</span>
+                    <span data-checkout-shipping>R$ 13,24</span>
                   </div>
                   <div class="summary-line total-line">
                     <span>Total a Pagar</span>
@@ -396,8 +416,8 @@ fbq('track', 'PageView');
       <section class="feature-row" aria-label="Benefícios da loja" id="ajuda">
         <article>
           <i data-lucide="truck" aria-hidden="true"></i>
-          <strong>Frete grátis para todo o Brasil</strong>
-          <span>Receba seu pedido no conforto da sua casa com entrega acompanhada.</span>
+          <strong>Entrega rápida via Correios</strong>
+          <span>Envio via PAC ou SEDEX com código de rastreamento prioritário em todo o Brasil.</span>
         </article>
         <article>
           <i data-lucide="credit-card" aria-hidden="true"></i>

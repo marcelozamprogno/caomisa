@@ -2,15 +2,15 @@
     "ok":  true,
     "source":  "yampi",
     "syncedAt":  "2026-06-05T21:13:54.393Z",
-    "count":  7,
+    "count":  5,
     "products":  [
                      {
                          "id":  "yampi-caomisa-brasil-classica-45171387",
                          "yampiProductId":  "45171387",
                          "name":  "Caomisa Brasil Clássica - Frete Grátis",
                          "category":  "Brasil",
-                         "price":  111.92,
-                         "oldPrice":  279.8,
+                         "price":  59.9,
+                         "oldPrice":  149.9,
                          "stock":  0,
                          "image":  "/assets/uploads/upload-1779920224941-0ee4da56-e7f2-48cd-b025-66cf0ef7c6e3.webp",
                          "images":  [
@@ -42,9 +42,9 @@
                                                         "token":  "JITOGFJL21",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/JITOGFJL21",
                                                         "size":  "PP",
-                                                        "price":  111.92,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  279.8,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -62,9 +62,9 @@
                                                         "token":  "9EAYZ657RH",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/9EAYZ657RH",
                                                         "size":  "P",
-                                                        "price":  111.92,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  279.8,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -82,9 +82,9 @@
                                                         "token":  "H45V0XK6SI",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/H45V0XK6SI",
                                                         "size":  "M",
-                                                        "price":  111.92,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  279.8,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -102,9 +102,9 @@
                                                         "token":  "ORA6Y62H7Y",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/ORA6Y62H7Y",
                                                         "size":  "G",
-                                                        "price":  111.92,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  279.8,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -122,9 +122,9 @@
                                                         "token":  "C0E3ORDR1W",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/C0E3ORDR1W",
                                                         "size":  "GG",
-                                                        "price":  111.92,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  279.8,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -302,8 +302,8 @@
                          "yampiProductId":  "45175542",
                          "name":  "Casaco Dino Confortável - Frete Grátis",
                          "category":  "Casacos",
-                         "price":  90.4,
-                         "oldPrice":  226,
+                         "price":  69.9,
+                         "oldPrice":  179.9,
                          "stock":  0,
                          "image":  "/assets/uploads/upload-1779920195223-21750904-9a59-4630-a0f5-ecf95610fe7d.webp",
                          "images":  [
@@ -335,9 +335,9 @@
                                                         "token":  "4KAV40DSG2",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/4KAV40DSG2",
                                                         "size":  "PP",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -355,9 +355,9 @@
                                                         "token":  "RH869RQFAX",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/RH869RQFAX",
                                                         "size":  "P",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -375,9 +375,9 @@
                                                         "token":  "JBVTW54RWC",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/JBVTW54RWC",
                                                         "size":  "M",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -395,9 +395,9 @@
                                                         "token":  "5VY29MDTNE",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/5VY29MDTNE",
                                                         "size":  "G",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -415,9 +415,9 @@
                                                         "token":  "KHLJZYW0VY",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/KHLJZYW0VY",
                                                         "size":  "GG",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -435,9 +435,9 @@
                                                         "token":  "PG30I66F0D",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/PG30I66F0D",
                                                         "size":  "XGG",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -628,8 +628,8 @@
                          "yampiProductId":  "45183938",
                          "name":  "Casaco Tubarão Confortável - Frete Grátis",
                          "category":  "Casacos",
-                         "price":  90.4,
-                         "oldPrice":  226,
+                         "price":  69.9,
+                         "oldPrice":  179.9,
                          "stock":  0,
                          "image":  "/assets/uploads/upload-1779920162105-e91d9f25-89a0-43d5-96c7-fa8d5293a4d3.webp",
                          "images":  [
@@ -661,9 +661,9 @@
                                                         "token":  "OO8UI12K5W",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/OO8UI12K5W",
                                                         "size":  "PP",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -681,9 +681,9 @@
                                                         "token":  "G6PL7RQJLW",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/G6PL7RQJLW",
                                                         "size":  "P",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -701,9 +701,9 @@
                                                         "token":  "FO20SNYQLQ",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/FO20SNYQLQ",
                                                         "size":  "M",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -721,9 +721,9 @@
                                                         "token":  "772MO2I5JZ",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/772MO2I5JZ",
                                                         "size":  "G",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -741,9 +741,9 @@
                                                         "token":  "MY3THDU5K0",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/MY3THDU5K0",
                                                         "size":  "GG",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -761,9 +761,9 @@
                                                         "token":  "DWYYR85X1S",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/DWYYR85X1S",
                                                         "size":  "XGG",
-                                                        "price":  90.4,
+                                                        "price":  69.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  226,
+                                                        "oldPrice":  179.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -954,8 +954,8 @@
                          "yampiProductId":  "45203338",
                          "name":  "Caomisa Brasil 3 Cores - Frete Grátis",
                          "category":  "Brasil",
-                         "price":  77.72,
-                         "oldPrice":  194.3,
+                         "price":  59.9,
+                         "oldPrice":  149.9,
                          "stock":  0,
                          "image":  "/assets/uploads/upload-1779897950998-d647ab90-cb1e-4142-bb76-712c6e2dde15.webp",
                          "images":  [
@@ -1011,9 +1011,9 @@
                                                         "token":  "KGWAI95WI8",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/KGWAI95WI8",
                                                         "size":  "1 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1037,9 +1037,9 @@
                                                         "token":  "O84LLQXGS8",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/O84LLQXGS8",
                                                         "size":  "1 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1063,9 +1063,9 @@
                                                         "token":  "S4309L27FO",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/S4309L27FO",
                                                         "size":  "1 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1089,9 +1089,9 @@
                                                         "token":  "GJ8LAXSPCL",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/GJ8LAXSPCL",
                                                         "size":  "2 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1115,9 +1115,9 @@
                                                         "token":  "49DQTLWP31",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/49DQTLWP31",
                                                         "size":  "2 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1141,9 +1141,9 @@
                                                         "token":  "LRUWKC090G",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/LRUWKC090G",
                                                         "size":  "2 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1167,9 +1167,9 @@
                                                         "token":  "TB6D5YWYIZ",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/TB6D5YWYIZ",
                                                         "size":  "3 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1193,9 +1193,9 @@
                                                         "token":  "HVRY53QQV7",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/HVRY53QQV7",
                                                         "size":  "3 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1219,9 +1219,9 @@
                                                         "token":  "9HR38NVW5Y",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/9HR38NVW5Y",
                                                         "size":  "3 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1245,9 +1245,9 @@
                                                         "token":  "TJP02FDG7T",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/TJP02FDG7T",
                                                         "size":  "4 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1271,9 +1271,9 @@
                                                         "token":  "QC7CKLWKLS",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/QC7CKLWKLS",
                                                         "size":  "4 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1297,9 +1297,9 @@
                                                         "token":  "C26NC2UOVM",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/C26NC2UOVM",
                                                         "size":  "4 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1323,9 +1323,9 @@
                                                         "token":  "69QWYE2CXX",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/69QWYE2CXX",
                                                         "size":  "5 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1349,9 +1349,9 @@
                                                         "token":  "3GGBMQFG8H",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/3GGBMQFG8H",
                                                         "size":  "5 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1375,9 +1375,9 @@
                                                         "token":  "F600JR0BRG",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/F600JR0BRG",
                                                         "size":  "5 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1401,9 +1401,9 @@
                                                         "token":  "612BX5VTIR",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/612BX5VTIR",
                                                         "size":  "6 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1427,9 +1427,9 @@
                                                         "token":  "GN52D6PJFF",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/GN52D6PJFF",
                                                         "size":  "6 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1453,9 +1453,9 @@
                                                         "token":  "C8TESKYB9M",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/C8TESKYB9M",
                                                         "size":  "6 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1479,9 +1479,9 @@
                                                         "token":  "N4Z5OSXNIR",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/N4Z5OSXNIR",
                                                         "size":  "7 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1505,9 +1505,9 @@
                                                         "token":  "8944K0PEEW",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/8944K0PEEW",
                                                         "size":  "7 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1531,9 +1531,9 @@
                                                         "token":  "RQD679JFWW",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/RQD679JFWW",
                                                         "size":  "7 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1557,9 +1557,9 @@
                                                         "token":  "DHBKCUAJ4J",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/DHBKCUAJ4J",
                                                         "size":  "8 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1583,9 +1583,9 @@
                                                         "token":  "JJL9OL732N",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/JJL9OL732N",
                                                         "size":  "8 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1609,9 +1609,9 @@
                                                         "token":  "1RLHZ9Y8S9",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/1RLHZ9Y8S9",
                                                         "size":  "8 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1635,9 +1635,9 @@
                                                         "token":  "L3E1W9H3EJ",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/L3E1W9H3EJ",
                                                         "size":  "9 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1661,9 +1661,9 @@
                                                         "token":  "9RGGVILH8A",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/9RGGVILH8A",
                                                         "size":  "9 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1687,9 +1687,9 @@
                                                         "token":  "HNQX5CFPWK",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/HNQX5CFPWK",
                                                         "size":  "9 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1713,9 +1713,9 @@
                                                         "token":  "CEK4APUSK3",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/CEK4APUSK3",
                                                         "size":  "10 / Amarelo",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1739,9 +1739,9 @@
                                                         "token":  "2J5GRXPDBR",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/2J5GRXPDBR",
                                                         "size":  "10 / Azul",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1765,9 +1765,9 @@
                                                         "token":  "JK6C20HDAC",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/JK6C20HDAC",
                                                         "size":  "10 / Verde",
-                                                        "price":  77.72,
+                                                        "price":  59.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  194.3,
+                                                        "oldPrice":  149.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -1974,8 +1974,8 @@
                          "yampiProductId":  "45209677",
                          "name":  "Caomisa Personalizada Nome e Número - Frete Grátis",
                          "category":  "Brasil",
-                         "price":  147.44,
-                         "oldPrice":  368.6,
+                         "price":  49.9,
+                         "oldPrice":  169.9,
                          "stock":  0,
                          "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/caomisa-personalizada-nome-e-numero-frete-gratis-1-6a185adee2f8f-large.jpg",
                          "images":  [
@@ -2012,9 +2012,9 @@
                                                         "token":  "9O764ET92T",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/9O764ET92T",
                                                         "size":  "1",
-                                                        "price":  99.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  248.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2032,9 +2032,9 @@
                                                         "token":  "3QMI1I1NK8",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/3QMI1I1NK8",
                                                         "size":  "2",
-                                                        "price":  99.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  248.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2052,9 +2052,9 @@
                                                         "token":  "BXPOGDHYKD",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/BXPOGDHYKD",
                                                         "size":  "3",
-                                                        "price":  99.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  248.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2072,9 +2072,9 @@
                                                         "token":  "7280LWCQ5E",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/7280LWCQ5E",
                                                         "size":  "4",
-                                                        "price":  107.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  268.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2092,9 +2092,9 @@
                                                         "token":  "MTRXYDNI3Y",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/MTRXYDNI3Y",
                                                         "size":  "5",
-                                                        "price":  115.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  288.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2112,9 +2112,9 @@
                                                         "token":  "JGL8R5JWD3",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/JGL8R5JWD3",
                                                         "size":  "6",
-                                                        "price":  123.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  308.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2132,9 +2132,9 @@
                                                         "token":  "CAGV9TP5FK",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/CAGV9TP5FK",
                                                         "size":  "7",
-                                                        "price":  131.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  328.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2152,9 +2152,9 @@
                                                         "token":  "FADZMDG2EB",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/FADZMDG2EB",
                                                         "size":  "8",
-                                                        "price":  139.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  348.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2172,9 +2172,9 @@
                                                         "token":  "MPHY3D1LR0",
                                                         "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/MPHY3D1LR0",
                                                         "size":  "9",
-                                                        "price":  147.44,
+                                                        "price":  49.9,
                                                         "priceCost":  0,
-                                                        "oldPrice":  368.6,
+                                                        "oldPrice":  169.9,
                                                         "stock":  0,
                                                         "variations":  [
                                                                            {
@@ -2618,157 +2618,8 @@
                                                             }
                                            },
                          "pageContentUpdatedAt":  "2026-06-03T15:11:52.295Z",
-                         "homeSortOrder":  1
-                     },
-                     {
-                         "id":  "yampi-bola-de-pelucia-da-copa-frete-gratis-45250403",
-                         "yampiProductId":  "45250403",
-                         "name":  "Bolinha pet da copa - Frete Grátis",
-                         "category":  "Produtos",
-                         "price":  43.12,
-                         "oldPrice":  107.8,
-                         "stock":  0,
-                         "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/bolinha-pet-da-copa-frete-gratis-6a1e42bd932d4-large.png",
-                         "images":  [
-                                        "https://images.yampi.me/assets/stores/caomisa/uploads/images/bolinha-pet-da-copa-frete-gratis-6a1e42bd932d4-large.png"
-                                    ],
-                         "sizes":  [
-                                       "Bolinha pet da copa - Frete Grátis"
-                                   ],
-                         "description":  "Produto importado automaticamente da loja.",
-                         "customization":  {
-                                               "enabled":  false,
-                                               "nameMaxLength":  16,
-                                               "numberMaxLength":  2
-                                           },
-                         "yampi":  {
-                                       "productId":  "45250403",
-                                       "url":  "https://caomisa.catalog.yampi.io/bola-de-pelucia-da-copa-frete-gratis/p",
-                                       "skus":  [
-                                                    {
-                                                        "id":  "299600051",
-                                                        "sku":  "3P2WDP7ZL",
-                                                        "token":  "JQ6US9LAZ1",
-                                                        "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/JQ6US9LAZ1",
-                                                        "size":  "Bolinha pet da copa - Frete Grátis",
-                                                        "price":  43.12,
-                                                        "priceCost":  0,
-                                                        "oldPrice":  107.8,
-                                                        "stock":  0,
-                                                        "variations":  [
-
-                                                                       ],
-                                                        "sourceProductId":  "45250403"
-                                                    }
-                                                ]
-                                   },
-                         "premium":  {
-                                         "soldCount":  "+598 vendidos",
-                                         "rating":  4.9,
-                                         "reviewCount":  0,
-                                         "badgeText":  "Compra segura",
-                                         "deliveryText":  "Frete gratis para todo o Brasil com checkout seguro.",
-                                         "descriptionTitle":  "Bolinha pet da copa - Frete Grátis com compra segura",
-                                         "descriptionIntro":  "Produto importado automaticamente da loja.",
-                                         "sizeGuideDesktopImage":  "",
-                                         "sizeGuideMobileImage":  "",
-                                         "descriptionBlocks":  [
-                                                                   {
-                                                                       "title":  "Detalhes do produto",
-                                                                       "text":  "Produto importado automaticamente da loja.",
-                                                                       "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/bolinha-pet-da-copa-frete-gratis-6a1e42bd932d4-large.png"
-                                                                   },
-                                                                   {
-                                                                       "title":  "Conforto e acabamento",
-                                                                       "text":  "Variações e tamanhos sincronizados automaticamente.",
-                                                                       "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/bolinha-pet-da-copa-frete-gratis-6a1e42bd932d4-large.png"
-                                                                   },
-                                                                   {
-                                                                       "title":  "Compra segura",
-                                                                       "text":  "Ao finalizar, o cliente vai para o checkout correto com os itens escolhidos.",
-                                                                       "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/bolinha-pet-da-copa-frete-gratis-6a1e42bd932d4-large.png"
-                                                                   }
-                                                               ],
-                                         "specs":  "Produto: 45250403\nCategoria: Produtos\nVariações: 1\nCheckout: seguro",
-                                         "reviews":  [
-
-                                                     ]
-                                     }
-                     },
-                     {
-                         "id":  "yampi-6-caomisas-personalizadas-45293026",
-                         "yampiProductId":  "45293026",
-                         "name":  "6 Cãomisas Personalizadas",
-                         "category":  "Brasil",
-                         "price":  354.32,
-                         "oldPrice":  885.8,
-                         "stock":  0,
-                         "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/6-caomisas-personalizadas-6a2213cf64743-large.jpg",
-                         "images":  [
-                                        "https://images.yampi.me/assets/stores/caomisa/uploads/images/6-caomisas-personalizadas-6a2213cf64743-large.jpg"
-                                    ],
-                         "sizes":  [
-                                       "6 Cãomisas Personalizadas"
-                                   ],
-                         "description":  "Produto importado automaticamente da loja.",
-                         "customization":  {
-                                               "enabled":  true,
-                                               "nameMaxLength":  16,
-                                               "numberMaxLength":  2
-                                           },
-                         "yampi":  {
-                                       "productId":  "45293026",
-                                       "url":  "https://caomisa.catalog.yampi.io/6-caomisas-personalizadas/p",
-                                       "skus":  [
-                                                    {
-                                                        "id":  "299796006",
-                                                        "sku":  "WYUASD26Q",
-                                                        "token":  "56MDQAT8NS",
-                                                        "purchaseUrl":  "https://caomisa.pay.yampi.com.br/r/56MDQAT8NS",
-                                                        "size":  "6 Cãomisas Personalizadas",
-                                                        "price":  354.32,
-                                                        "priceCost":  0,
-                                                        "oldPrice":  885.8,
-                                                        "stock":  0,
-                                                        "variations":  [
-
-                                                                       ],
-                                                        "sourceProductId":  "45293026"
-                                                    }
-                                                ]
-                                   },
-                         "premium":  {
-                                         "soldCount":  "+598 vendidos",
-                                         "rating":  4.9,
-                                         "reviewCount":  0,
-                                         "badgeText":  "Compra segura",
-                                         "deliveryText":  "Frete gratis para todo o Brasil com checkout seguro.",
-                                         "descriptionTitle":  "6 Cãomisas Personalizadas com compra segura",
-                                         "descriptionIntro":  "Produto importado automaticamente da loja.",
-                                         "sizeGuideDesktopImage":  "",
-                                         "sizeGuideMobileImage":  "",
-                                         "descriptionBlocks":  [
-                                                                   {
-                                                                       "title":  "Detalhes do produto",
-                                                                       "text":  "Produto importado automaticamente da loja.",
-                                                                       "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/6-caomisas-personalizadas-6a2213cf64743-large.jpg"
-                                                                   },
-                                                                   {
-                                                                       "title":  "Conforto e acabamento",
-                                                                       "text":  "Variações e tamanhos sincronizados automaticamente.",
-                                                                       "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/6-caomisas-personalizadas-6a2213cf64743-large.jpg"
-                                                                   },
-                                                                   {
-                                                                       "title":  "Compra segura",
-                                                                       "text":  "Ao finalizar, o cliente vai para o checkout correto com os itens escolhidos.",
-                                                                       "image":  "https://images.yampi.me/assets/stores/caomisa/uploads/images/6-caomisas-personalizadas-6a2213cf64743-large.jpg"
-                                                                   }
-                                                               ],
-                                         "specs":  "Produto: 45293026\nCategoria: Brasil\nVariações: 1\nCheckout: seguro",
-                                         "reviews":  [
-
-                                                     ]
-                                     }
+                         "homeSortOrder":  1,
+                         "badge":  "MAIS PEDIDO"
                      }
                  ],
     "categories":  [

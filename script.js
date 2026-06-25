@@ -318,7 +318,13 @@ function renderCatalog(selectedCategory = "", searchQuery = "") {
 function renderProductCardHtml(p) {
   const oldPriceHtml = p.oldPrice > p.price ? `<span class="old-price">${formatBRL(p.oldPrice)}</span>` : "";
   const discountPct = p.oldPrice > p.price ? Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100) : 0;
-  const badgeHtml = discountPct > 0 ? `<div class="product-card-badge">-${discountPct}%</div>` : "";
+  
+  let badgeHtml = "";
+  if (p.badge) {
+    badgeHtml = `<div class="product-card-badge badge-custom">${p.badge}</div>`;
+  } else if (discountPct > 0) {
+    badgeHtml = `<div class="product-card-badge">-${discountPct}%</div>`;
+  }
   
   const cleanSlug = p.id.replace(/^yampi-/i, "");
   
@@ -1033,6 +1039,35 @@ function bindEvents() {
 }
 
 // --- INTEGRATED CHECKOUT LOGIC ---
+let currentShippingCost = 0;
+let hasCalculatedShipping = false;
+
+window.selectShipping = function(el) {
+  document.querySelectorAll('.shipping-option-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  currentShippingCost = parseFloat(el.dataset.price);
+  updateCheckoutTotals();
+};
+
+function updateCheckoutTotals() {
+  const subtotalSpan = document.querySelector("[data-checkout-subtotal]");
+  const discountSpan = document.querySelector("[data-checkout-pix-discount]");
+  const shippingSpan = document.querySelector("[data-checkout-shipping]");
+  const totalStrong = document.querySelector("[data-checkout-total]");
+  
+  if (!subtotalSpan || !discountSpan || !totalStrong) return;
+
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const pixDiscount = subtotal * 0.05;
+  const total = subtotal + currentShippingCost - pixDiscount;
+  
+  subtotalSpan.textContent = formatBRL(subtotal);
+  discountSpan.textContent = `- ${formatBRL(pixDiscount)}`;
+  if (shippingSpan) {
+    shippingSpan.textContent = hasCalculatedShipping ? formatBRL(currentShippingCost) : "-";
+  }
+  totalStrong.textContent = formatBRL(total);
+}
 
 function renderCheckout() {
   document.title = "Finalizar Compra | Caomisa";
@@ -1074,13 +1109,7 @@ function renderCheckout() {
     `;
   }).join("");
   
-  const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const pixDiscount = subtotal * 0.05;
-  const total = subtotal - pixDiscount;
-  
-  subtotalSpan.textContent = formatBRL(subtotal);
-  discountSpan.textContent = `- ${formatBRL(pixDiscount)}`;
-  totalStrong.textContent = formatBRL(total);
+  updateCheckoutTotals();
   
   setupCheckoutInputFormatters();
   
@@ -1162,6 +1191,23 @@ async function handleCepLookup(cep) {
       
       const numInput = document.getElementById("checkout-number");
       if (numInput) numInput.focus();
+      
+      // Show shipping options after CEP
+      const placeholder = document.getElementById("shipping-placeholder");
+      const box = document.getElementById("shipping-options-box");
+      if (placeholder) placeholder.style.display = "none";
+      if (box) box.style.display = "block";
+      
+      hasCalculatedShipping = true;
+      currentShippingCost = 13.24; // Default PAC selection
+      
+      const activeCard = box?.querySelector(".shipping-option-card.active");
+      if (activeCard) {
+        currentShippingCost = parseFloat(activeCard.dataset.price);
+      }
+      
+      updateCheckoutTotals();
+      
     } else {
       showToast("CEP não encontrado. Digite o endereço manualmente.");
     }
@@ -1305,7 +1351,7 @@ function handlePaymentSubmit() {
   
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const pixDiscount = subtotal * 0.05;
-  const total = subtotal - pixDiscount;
+  const total = subtotal + currentShippingCost - pixDiscount;
   
   const orderNumber = Math.floor(10000 + Math.random() * 90000);
   const randomHex = Array.from({length: 32}, () => Math.floor(Math.random()*16).toString(16)).join("");
