@@ -1,14 +1,20 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/api/products", "destination": "/api_products.json" },
-    { "source": "/api/banners", "destination": "/api_banners.json" },
-    { "source": "/api/site-content", "destination": "/api_site_content.json" },
-    { "source": "/api/collections", "destination": "/api_collections.json" },
-    { "source": "/produtos", "destination": "/index.html" },
-    { "source": "/ajuda", "destination": "/index.html" },
-    { "source": "/politicas", "destination": "/index.html" },
-    { "source": "/checkout", "destination": "/index.html" },
-    { "source": "/produto/:path*", "destination": "/index.html" }
+  "builds": [
+    { "src": "api/pix.js", "use": "@vercel/node" },
+    { "src": "package.json", "use": "@vercel/static" },
+    { "src": "**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/pix", "dest": "/api/pix.js" },
+    { "src": "/api/products", "dest": "/api_products.json" },
+    { "src": "/api/banners", "dest": "/api_banners.json" },
+    { "src": "/api/site-content", "dest": "/api_site_content.json" },
+    { "src": "/api/collections", "dest": "/api_collections.json" },
+    { "handle": "filesystem" },
+    { "src": "/produtos", "dest": "/index.html" },
+    { "src": "/ajuda", "dest": "/index.html" },
+    { "src": "/politicas", "dest": "/index.html" },
+    { "src": "/checkout", "dest": "/index.html" },
+    { "src": "/produto/.*", "dest": "/index.html" }
   ]
 }
