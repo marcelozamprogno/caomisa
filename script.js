@@ -1319,7 +1319,7 @@ function drawMockQrCode() {
   svg.innerHTML = paths.join("");
 }
 
-function handlePaymentSubmit() {
+async function handlePaymentSubmit() {
   const name = document.getElementById("checkout-name")?.value.trim();
   const email = document.getElementById("checkout-email")?.value.trim();
   const phone = document.getElementById("checkout-phone")?.value.trim();
@@ -1347,38 +1347,58 @@ function handlePaymentSubmit() {
     return;
   }
   
-  showToast("Gerando código Pix seguro...");
+  showToast("Conectando com Invictus Pay para gerar o Pix...");
   
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const pixDiscount = subtotal * 0.05;
   const total = subtotal + currentShippingCost - pixDiscount;
   
-  const orderNumber = Math.floor(10000 + Math.random() * 90000);
-  const randomHex = Array.from({length: 32}, () => Math.floor(Math.random()*16).toString(16)).join("");
-  const pixKey = `00020101021226870014br.gov.bcb.pix2565caomisashop${orderNumber}@pix.bcb.gov.br5204000053039865405${total.toFixed(2)}5802BR5912CAOMISASHOP6009SAO%20PAULO62070503${orderNumber}6304${randomHex.slice(0,4).toUpperCase()}`;
-  
+  const payload = {
+    name, email, phone, cpf, cep, street, number, neighborhood, city, state,
+    cart, total, shippingCost: currentShippingCost
+  };
+
   const formColumn = document.querySelector(".checkout-form-column");
   if (!formColumn) return;
-  
-  formColumn.innerHTML = `
-    <div class="checkout-card pix-success-container">
-      <div class="success-checkmark">
-        <i data-lucide="check-circle-2" aria-hidden="true"></i>
-      </div>
-      <h2>Pedido Realizado com Sucesso!</h2>
-      <p>Seu pedido <strong>#${orderNumber}</strong> foi gerado e aguarda pagamento por Pix. O seu estoque estará reservado pelos próximos 10 minutos.</p>
-      
-      <div class="pix-timer-box">
-        <i data-lucide="clock" aria-hidden="true"></i>
-        <span>Pague em: <strong id="pix-countdown">09:59</strong></span>
-      </div>
-      
-      <div class="pix-qr-code-box">
-        <svg id="pix-qr-svg" width="200" height="200" viewBox="0 0 29 29" shape-rendering="crispEdges">
-          <!-- Dynamically filled -->
-        </svg>
-        <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; font-weight: 600;">Escaneie o código com o aplicativo do seu banco</span>
-      </div>
+
+  try {
+    const response = await fetch('/api/pix', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      console.error("Erro da API Invictus:", data);
+      showToast("Erro ao gerar Pix. Verifique a configuração da Invictus Pay no Console.");
+      return;
+    }
+
+    const orderNumber = data.order_id;
+    const pixKey = data.qr_code_text || "Chave PIX não retornada";
+    const qrCodeImage = data.qr_code_base64 
+      ? `<img src="${data.qr_code_base64}" alt="QR Code Pix" style="max-width: 100%; border-radius: 8px;">`
+      : `<svg id="pix-qr-svg" width="200" height="200" viewBox="0 0 29 29" shape-rendering="crispEdges"></svg>`;
+
+    formColumn.innerHTML = `
+      <div class="checkout-card pix-success-container">
+        <div class="success-checkmark">
+          <i data-lucide="check-circle-2" aria-hidden="true"></i>
+        </div>
+        <h2>Pedido Realizado com Sucesso!</h2>
+        <p>Seu pedido <strong>#${orderNumber}</strong> foi gerado e aguarda pagamento por Pix. O seu estoque estará reservado pelos próximos 10 minutos.</p>
+        
+        <div class="pix-timer-box">
+          <i data-lucide="clock" aria-hidden="true"></i>
+          <span>Pague em: <strong id="pix-countdown">09:59</strong></span>
+        </div>
+        
+        <div class="pix-qr-code-box">
+          ${qrCodeImage}
+          <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; font-weight: 600;">Escaneie o código com o aplicativo do seu banco</span>
+        </div>
       
       <div class="pix-copia-cola-box">
         <label for="pix-key-input">Pix Copia e Cola</label>
@@ -1404,32 +1424,60 @@ function handlePaymentSubmit() {
     </div>
   `;
   
-  iconRefresh();
-  drawMockQrCode();
-  
-  cart = [];
-  saveCart();
-  startPixCountdown();
-  
-  document.getElementById("btn-copy-pix").addEventListener("click", () => {
-    const input = document.getElementById("pix-key-input");
-    if (input) {
-      input.select();
-      input.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(input.value);
-      showToast("Chave Pix Copia e Cola copiada!");
-      
-      const copyBtn = document.getElementById("btn-copy-pix");
-      if (copyBtn) {
-        copyBtn.textContent = "Copiado!";
-        copyBtn.style.background = "#22c55e";
-        setTimeout(() => {
-          copyBtn.textContent = "Copiar Código";
-          copyBtn.style.background = "var(--brand-primary)";
-        }, 2000);
-      }
+    iconRefresh();
+    if (!data.qr_code_base64) {
+      drawMockQrCode();
     }
-  });
+    
+    cart = [];
+    saveCart();
+    startPixCountdown();
+    
+    document.getElementById("btn-copy-pix").addEventListener("click", () => {
+      const input = document.getElementById("pix-key-input");
+      if (input) {
+        input.select();
+        input.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(input.value);
+        showToast("Chave Pix Copia e Cola copiada!");
+        
+        const copyBtn = document.getElementById("btn-copy-pix");
+        if (copyBtn) {
+          copyBtn.textContent = "Copiado!";
+          copyBtn.style.background = "#22c55e";
+          setTimeout(() => {
+            copyBtn.textContent = "Copiar Código";
+            copyBtn.style.background = "var(--brand-primary)";
+          }, 2000);
+        }
+      }
+    });
+    
+    document.getElementById("btn-already-paid").addEventListener("click", () => {
+      showToast("Validando pagamento Pix seguro...");
+      setTimeout(() => {
+        formColumn.innerHTML = `
+          <div class="checkout-card pix-success-container" style="padding: 40px 20px;">
+            <div class="success-checkmark" style="background: rgba(34, 197, 94, 0.1); color: var(--success); width: 88px; height: 88px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+              <i data-lucide="shield-check" style="width: 48px; height: 48px;" aria-hidden="true"></i>
+            </div>
+            <h2>Pagamento Confirmado!</h2>
+            <p>Obrigado pela sua compra. Seu pedido será preparado para envio via ${currentShippingType === 'SEDEX' ? 'SEDEX' : 'PAC'}.</p>
+            <div style="margin-top: 32px;">
+              <a class="primary-button" href="/">Voltar para a Loja</a>
+            </div>
+          </div>
+        `;
+        iconRefresh();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 2000);
+    });
+
+  } catch (err) {
+    console.error("Erro no fetch para API Pix:", err);
+    showToast("Falha de comunicação com o servidor.");
+  }
+}
   
   document.getElementById("btn-already-paid").addEventListener("click", () => {
     showToast("Validando pagamento Pix seguro...");
