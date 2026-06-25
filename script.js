@@ -1478,26 +1478,7 @@ async function handlePaymentSubmit() {
     showToast("Falha de comunicação com o servidor.");
   }
 }
-  
-  document.getElementById("btn-already-paid").addEventListener("click", () => {
-    showToast("Validando pagamento Pix seguro...");
-    setTimeout(() => {
-      formColumn.innerHTML = `
-        <div class="checkout-card pix-success-container" style="padding: 40px 20px;">
-          <div class="success-checkmark" style="background: rgba(34, 197, 94, 0.1); color: var(--success); width: 88px; height: 88px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
-            <i data-lucide="shield-check" style="width: 48px; height: 48px;" aria-hidden="true"></i>
-          </div>
-          <h2 style="color: var(--brand-secondary); font-weight: 800; font-size: 1.8rem; margin-bottom: 12px;">Pagamento Confirmado!</h2>
-          <p style="color: var(--text-muted); font-size: 1rem; max-width: 480px; margin: 0 auto 30px; line-height: 1.6;">
-            Seu pagamento foi aprovado com sucesso! Iniciamos o processamento e a embalagem prioritária do pedido <strong>#${orderNumber}</strong>. Você receberá atualizações no e-mail cadastrado.
-          </p>
-          <a class="primary-button" href="/" style="max-width: 280px; margin: 0 auto; display: block; text-decoration: none; padding: 14px 28px;">Voltar para o Início</a>
-        </div>
-      `;
-      iconRefresh();
-    }, 1500);
-  });
-}
+
 
 // INICIALIZAÇÃO
 document.addEventListener("DOMContentLoaded", async () => {
