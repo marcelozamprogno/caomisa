@@ -1,5 +1,15 @@
 {
   "cleanUrls": true,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     { "source": "/api/products", "destination": "/api_products.json" },
     { "source": "/api/banners", "destination": "/api_banners.json" },
