@@ -27,8 +27,9 @@ export default async function handler(req, res) {
     // checkout_hash: mpljoroel6 (não usado explicitamente no json de api, mas vamos deixar documentado)
 
     const payload = {
+      api_token: process.env.INVICTUS_TOKEN,
       amount: Math.round(total * 100), // Em centavos (ex: 59.90 -> 5990)
-      offer_hash: "pycyfgyy0y", 
+      offer_hash: "mpljoroel6", // Hash do checkout fornecido
       payment_method: "pix",
       customer: {
         name: name,
@@ -44,7 +45,7 @@ export default async function handler(req, res) {
         zip_code: cep.replace(/\D/g, "")
       },
       cart: cart.map(item => ({
-        product_hash: "", // Deixando vazio pois não foi fornecido um hash por produto
+        product_hash: "pycyfgyy0y", // Hash do produto fornecido
         title: item.name,
         cover: item.image,
         price: Math.round(item.price * 100),
@@ -68,25 +69,24 @@ export default async function handler(req, res) {
     const response = await fetch(INVICTUS_API_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.INVICTUS_TOKEN}`
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(payload)
     });
 
     const data = await response.json();
 
-    if (!response.ok) {
+    if (!response.ok || data.success === false) {
       console.error("Invictus Pay Error:", data);
       return res.status(400).json({ error: "Failed to generate PIX", details: data });
     }
 
-    // Mapeando a resposta de acordo com APIs padrão de Pix. Pode precisar de ajuste caso a Invictus retorne diferente.
-    // Normalmente o response tem algo como data.transaction.qr_code_image ou data.pix.qrcode
-    const transaction = data.transaction || data.data || data;
+    const transaction = data.transaction || data;
     
-    const qrCodeImage = transaction.qr_code_image || transaction.qr_code_base64 || transaction.pix_qr_code || ""; 
-    const qrCodeText = transaction.qr_code_text || transaction.pix_emv || transaction.pix_code || transaction.copia_e_cola || "";
+    // O texto do copia e cola está em data.pix.pix_qr_code
+    const qrCodeText = data.pix?.pix_qr_code || "";
+    // A Invictus não retorna a imagem base64, então geramos uma usando uma API pública
+    const qrCodeImage = qrCodeText ? `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(qrCodeText)}` : ""; 
     
     // We send back exactly what the frontend needs
     return res.status(200).json({
