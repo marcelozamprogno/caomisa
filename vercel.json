@@ -14,6 +14,7 @@
     { "source": "/produtos", "destination": "/index.html" },
     { "source": "/ajuda", "destination": "/index.html" },
     { "source": "/politicas", "destination": "/index.html" },
+    { "source": "/checkout", "destination": "/index.html" },
     { "source": "/produto/:path*", "destination": "/index.html" }
   ]
 }

@@ -32,7 +32,7 @@ class SPAMockRequestHandler(http.server.SimpleHTTPRequestHandler):
         # If the path is for a subpage or doesn't have an extension (like /produtos or /produto/...)
         _, ext = os.path.splitext(self.path)
         is_html_route = not ext or ext == ".html"
-        is_product_route = self.path.startswith("/produto/") or self.path == "/produtos" or self.path == "/ajuda" or self.path == "/politicas"
+        is_product_route = self.path.startswith("/produto/") or self.path == "/produtos" or self.path == "/ajuda" or self.path == "/politicas" or self.path == "/checkout"
         
         if (self.path == "/" or is_product_route) and is_html_route:
             self.path = "/index.html"

@@ -767,38 +767,15 @@ function bindCartCloseButtons() {
   });
 }
 
-// Checkout button redirect to Yampi
+// Checkout button redirect to integrated checkout
 function handleCheckout() {
   if (!cart.length) {
     showToast("Adicione produtos ao carrinho para finalizar a compra.");
     return;
   }
   
-  // Load full product references to find SKUs
-  const firstItem = cart[0];
-  const fullProduct = products.find(p => p.id === firstItem.productId);
-  
-  if (!fullProduct) {
-    showToast("Erro ao abrir checkout. Tente novamente.");
-    return;
-  }
-  
-  const checkoutUrl = generateCheckoutUrl(
-    fullProduct, 
-    firstItem.size, 
-    firstItem.color, 
-    firstItem.quantity, 
-    firstItem.customization
-  );
-  
-  if (checkoutUrl) {
-    showToast("Redirecionando para o checkout seguro...");
-    setTimeout(() => {
-      window.location.href = checkoutUrl;
-    }, 800);
-  } else {
-    showToast("Checkout indisponível para este produto/tamanho.");
-  }
+  closeCartDrawer();
+  navigate("/checkout");
 }
 
 // SPA ROUTER
@@ -810,12 +787,14 @@ function route() {
   const catalogView = document.getElementById("catalog-view");
   const productView = document.getElementById("product-view");
   const policiesView = document.getElementById("policies-view");
+  const checkoutView = document.getElementById("checkout-view");
   
   // Hide all initially
   if (homeView) homeView.hidden = true;
   if (catalogView) catalogView.hidden = true;
   if (productView) productView.hidden = true;
   if (policiesView) policiesView.hidden = true;
+  if (checkoutView) checkoutView.hidden = true;
   
   // Set active link in header
   document.querySelectorAll("[data-main-nav] a").forEach(link => {
@@ -833,6 +812,12 @@ function route() {
     if (productView) {
       productView.hidden = false;
       renderProductPage(productMatch[1]);
+    }
+  } else if (path === "/checkout") {
+    // Checkout page
+    if (checkoutView) {
+      checkoutView.hidden = false;
+      renderCheckout();
     }
   } else if (path === "/produtos") {
     // Catalog page
@@ -1045,6 +1030,379 @@ function bindEvents() {
   
   // Popstate history listener for back/forward buttons
   window.addEventListener("popstate", route);
+}
+
+// --- INTEGRATED CHECKOUT LOGIC ---
+
+function renderCheckout() {
+  document.title = "Finalizar Compra | Caomisa";
+  
+  const checkoutItemsContainer = document.querySelector("[data-checkout-items]");
+  const subtotalSpan = document.querySelector("[data-checkout-subtotal]");
+  const discountSpan = document.querySelector("[data-checkout-pix-discount]");
+  const totalStrong = document.querySelector("[data-checkout-total]");
+  
+  if (!checkoutItemsContainer || !subtotalSpan || !discountSpan || !totalStrong) return;
+  
+  if (cart.length === 0) {
+    document.getElementById("checkout-view").innerHTML = `
+      <div class="cart-empty" style="max-width: 500px; margin: 80px auto; text-align: center;">
+        <i data-lucide="shopping-bag" style="width: 64px; height: 64px; color: var(--text-muted); margin-bottom: 20px;" aria-hidden="true"></i>
+        <h2 style="color: var(--brand-secondary); margin-bottom: 12px; font-weight: 800;">Seu carrinho está vazio</h2>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">Adicione produtos para poder finalizar sua compra.</p>
+        <a class="primary-button" href="/produtos">Ir para a Loja</a>
+      </div>
+    `;
+    iconRefresh();
+    return;
+  }
+  
+  checkoutItemsContainer.innerHTML = cart.map((item) => {
+    const metaStr = item.customization 
+      ? `Tamanho: ${item.size} | Nome: <strong>${item.customization.name}</strong> | Nº: <strong>${item.customization.number}</strong>`
+      : `Tamanho: ${item.size}`;
+      
+    return `
+      <div class="checkout-item-row">
+        <img src="${item.image}" alt="${item.name}" />
+        <div class="checkout-item-info">
+          <span class="checkout-item-title">${item.name}</span>
+          <span class="checkout-item-meta">${metaStr} (x${item.quantity})</span>
+        </div>
+        <span class="checkout-item-price">${formatBRL(item.price * item.quantity)}</span>
+      </div>
+    `;
+  }).join("");
+  
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const pixDiscount = subtotal * 0.05;
+  const total = subtotal - pixDiscount;
+  
+  subtotalSpan.textContent = formatBRL(subtotal);
+  discountSpan.textContent = `- ${formatBRL(pixDiscount)}`;
+  totalStrong.textContent = formatBRL(total);
+  
+  setupCheckoutInputFormatters();
+  
+  const payBtn = document.getElementById("btn-generate-pix");
+  if (payBtn) {
+    payBtn.addEventListener("click", handlePaymentSubmit);
+  }
+}
+
+function setupCheckoutInputFormatters() {
+  const phoneInput = document.getElementById("checkout-phone");
+  const cpfInput = document.getElementById("checkout-cpf");
+  const cepInput = document.getElementById("checkout-cep");
+  
+  if (phoneInput) {
+    phoneInput.addEventListener("input", (e) => {
+      let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+      e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    });
+  }
+  
+  if (cpfInput) {
+    cpfInput.addEventListener("input", (e) => {
+      let val = e.target.value.replace(/\D/g, "");
+      if (val.length > 11) val = val.slice(0, 11);
+      
+      let formatted = "";
+      if (val.length > 9) {
+        formatted = val.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+      } else if (val.length > 6) {
+        formatted = val.replace(/(\d{3})(\d{3})(\d{1,3})/, "$1.$2.$3");
+      } else if (val.length > 3) {
+        formatted = val.replace(/(\d{3})(\d{1,3})/, "$1.$2");
+      } else {
+        formatted = val;
+      }
+      e.target.value = formatted;
+    });
+  }
+  
+  if (cepInput) {
+    cepInput.addEventListener("input", async (e) => {
+      let val = e.target.value.replace(/\D/g, "");
+      if (val.length > 8) val = val.slice(0, 8);
+      
+      let formatted = val;
+      if (val.length > 5) {
+        formatted = val.replace(/(\d{5})(\d{1,3})/, "$1-$2");
+      }
+      e.target.value = formatted;
+      
+      if (val.length === 8) {
+        await handleCepLookup(val);
+      }
+    });
+  }
+}
+
+async function handleCepLookup(cep) {
+  const street = document.getElementById("checkout-street");
+  const neighborhood = document.getElementById("checkout-neighborhood");
+  const city = document.getElementById("checkout-city");
+  const state = document.getElementById("checkout-state");
+  const spinner = document.querySelector(".cep-loading-spinner");
+  
+  if (!street || !neighborhood || !city || !state) return;
+  
+  if (spinner) spinner.hidden = false;
+  
+  try {
+    const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const data = await res.json();
+    
+    if (data && !data.erro) {
+      street.value = data.logradouro || "";
+      neighborhood.value = data.bairro || "";
+      city.value = data.localidade || "";
+      state.value = data.uf || "";
+      
+      const numInput = document.getElementById("checkout-number");
+      if (numInput) numInput.focus();
+    } else {
+      showToast("CEP não encontrado. Digite o endereço manualmente.");
+    }
+  } catch (err) {
+    console.error("Erro ao buscar CEP:", err);
+  } finally {
+    if (spinner) spinner.hidden = true;
+  }
+}
+
+let pixTimerInterval = null;
+function startPixCountdown() {
+  clearInterval(pixTimerInterval);
+  let duration = 10 * 60;
+  
+  const display = document.getElementById("pix-countdown");
+  if (!display) return;
+  
+  pixTimerInterval = setInterval(() => {
+    let minutes = Math.floor(duration / 60);
+    let seconds = duration % 60;
+    
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+    display.textContent = `${minutes}:${seconds}`;
+    
+    if (--duration < 0) {
+      clearInterval(pixTimerInterval);
+      display.textContent = "EXPIRADO";
+      display.parentElement.style.color = "var(--text-muted)";
+      display.parentElement.style.background = "#edf2f7";
+      display.parentElement.style.borderColor = "#cbd5e1";
+      showToast("O código Pix expirou. Por favor, refaça o pedido.");
+    }
+  }, 1000);
+}
+
+function drawMockQrCode() {
+  const svg = document.getElementById("pix-qr-svg");
+  if (!svg) return;
+  
+  svg.innerHTML = "";
+  
+  const grid = 29;
+  const finderPattern = [
+    [1,1,1,1,1,1,1],
+    [1,0,0,0,0,0,1],
+    [1,0,1,1,1,0,1],
+    [1,0,1,1,1,0,1],
+    [1,0,1,1,1,0,1],
+    [1,0,0,0,0,0,1],
+    [1,1,1,1,1,1,1]
+  ];
+  
+  let matrix = Array.from({length: grid}, () => Array(grid).fill(0));
+  
+  for (let r=0; r<7; r++) {
+    for (let c=0; c<7; c++) {
+      matrix[r][c] = finderPattern[r][c];
+    }
+  }
+  for (let r=0; r<7; r++) {
+    for (let c=0; c<7; c++) {
+      matrix[r][grid-7+c] = finderPattern[r][c];
+    }
+  }
+  for (let r=0; r<7; r++) {
+    for (let c=0; c<7; c++) {
+      matrix[grid-7+r][c] = finderPattern[r][c];
+    }
+  }
+  
+  matrix[18][18] = 1; matrix[18][19] = 1; matrix[18][20] = 1;
+  matrix[19][18] = 1; matrix[19][20] = 1;
+  matrix[20][18] = 1; matrix[20][19] = 1; matrix[20][20] = 1;
+  
+  for (let c=8; c<grid-8; c++) {
+    matrix[6][c] = c % 2 === 0 ? 1 : 0;
+  }
+  for (let r=8; r<grid-8; r++) {
+    matrix[r][6] = r % 2 === 0 ? 1 : 0;
+  }
+  
+  for (let r=0; r<grid; r++) {
+    for (let c=0; c<grid; c++) {
+      const inTopLeft = r < 9 && c < 9;
+      const inTopRight = r < 9 && c > grid - 10;
+      const inBottomLeft = r > grid - 10 && c < 9;
+      const inAlignment = r > 16 && r < 22 && c > 16 && c < 22;
+      const inTiming = r === 6 || c === 6;
+      
+      if (!inTopLeft && !inTopRight && !inBottomLeft && !inAlignment && !inTiming) {
+        const hash = Math.sin(r * 12.9898 + c * 78.233) * 43758.5453;
+        matrix[r][c] = (hash - Math.floor(hash)) > 0.45 ? 1 : 0;
+      }
+    }
+  }
+  
+  let paths = [];
+  for (let r=0; r<grid; r++) {
+    for (let c=0; c<grid; c++) {
+      if (matrix[r][c] === 1) {
+        paths.push(`<rect x="${c}" y="${r}" width="1" height="1" fill="#000b2f" />`);
+      }
+    }
+  }
+  
+  svg.innerHTML = paths.join("");
+}
+
+function handlePaymentSubmit() {
+  const name = document.getElementById("checkout-name")?.value.trim();
+  const email = document.getElementById("checkout-email")?.value.trim();
+  const phone = document.getElementById("checkout-phone")?.value.trim();
+  const cpf = document.getElementById("checkout-cpf")?.value.trim();
+  const cep = document.getElementById("checkout-cep")?.value.trim();
+  const street = document.getElementById("checkout-street")?.value.trim();
+  const number = document.getElementById("checkout-number")?.value.trim();
+  const neighborhood = document.getElementById("checkout-neighborhood")?.value.trim();
+  const city = document.getElementById("checkout-city")?.value.trim();
+  const state = document.getElementById("checkout-state")?.value.trim();
+  
+  if (!name || !email || !phone || !cpf || !cep || !street || !number || !neighborhood || !city || !state) {
+    showToast("Por favor, preencha todos os campos obrigatórios.");
+    return;
+  }
+  
+  if (!email.includes("@") || !email.includes(".")) {
+    showToast("Por favor, digite um e-mail válido.");
+    return;
+  }
+  
+  const cleanCpf = cpf.replace(/\D/g, "");
+  if (cleanCpf.length !== 11) {
+    showToast("Por favor, digite um CPF válido.");
+    return;
+  }
+  
+  showToast("Gerando código Pix seguro...");
+  
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const pixDiscount = subtotal * 0.05;
+  const total = subtotal - pixDiscount;
+  
+  const orderNumber = Math.floor(10000 + Math.random() * 90000);
+  const randomHex = Array.from({length: 32}, () => Math.floor(Math.random()*16).toString(16)).join("");
+  const pixKey = `00020101021226870014br.gov.bcb.pix2565caomisashop${orderNumber}@pix.bcb.gov.br5204000053039865405${total.toFixed(2)}5802BR5912CAOMISASHOP6009SAO%20PAULO62070503${orderNumber}6304${randomHex.slice(0,4).toUpperCase()}`;
+  
+  const formColumn = document.querySelector(".checkout-form-column");
+  if (!formColumn) return;
+  
+  formColumn.innerHTML = `
+    <div class="checkout-card pix-success-container">
+      <div class="success-checkmark">
+        <i data-lucide="check-circle-2" aria-hidden="true"></i>
+      </div>
+      <h2>Pedido Realizado com Sucesso!</h2>
+      <p>Seu pedido <strong>#${orderNumber}</strong> foi gerado e aguarda pagamento por Pix. O seu estoque estará reservado pelos próximos 10 minutos.</p>
+      
+      <div class="pix-timer-box">
+        <i data-lucide="clock" aria-hidden="true"></i>
+        <span>Pague em: <strong id="pix-countdown">09:59</strong></span>
+      </div>
+      
+      <div class="pix-qr-code-box">
+        <svg id="pix-qr-svg" width="200" height="200" viewBox="0 0 29 29" shape-rendering="crispEdges">
+          <!-- Dynamically filled -->
+        </svg>
+        <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; font-weight: 600;">Escaneie o código com o aplicativo do seu banco</span>
+      </div>
+      
+      <div class="pix-copia-cola-box">
+        <label for="pix-key-input">Pix Copia e Cola</label>
+        <div class="copia-cola-input-group">
+          <input id="pix-key-input" type="text" value="${pixKey}" readonly />
+          <button type="button" id="btn-copy-pix">Copiar Código</button>
+        </div>
+      </div>
+      
+      <div class="pix-instructions">
+        <h4>Como Pagar:</h4>
+        <ol>
+          <li>Entre no aplicativo do seu banco e acesse a área <strong>Pix</strong>.</li>
+          <li>Escolha a opção <strong>Pix Copia e Cola</strong> (ou aponte a câmera para o QR Code acima).</li>
+          <li>Cole o código copiado ou escaneie o QR Code.</li>
+          <li>Confirme se o valor é de <strong>${formatBRL(total)}</strong> e finalize o pagamento.</li>
+        </ol>
+      </div>
+      
+      <button type="button" class="primary-button already-paid-btn" id="btn-already-paid">
+        Já fiz o pagamento
+      </button>
+    </div>
+  `;
+  
+  iconRefresh();
+  drawMockQrCode();
+  
+  cart = [];
+  saveCart();
+  startPixCountdown();
+  
+  document.getElementById("btn-copy-pix").addEventListener("click", () => {
+    const input = document.getElementById("pix-key-input");
+    if (input) {
+      input.select();
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(input.value);
+      showToast("Chave Pix Copia e Cola copiada!");
+      
+      const copyBtn = document.getElementById("btn-copy-pix");
+      if (copyBtn) {
+        copyBtn.textContent = "Copiado!";
+        copyBtn.style.background = "#22c55e";
+        setTimeout(() => {
+          copyBtn.textContent = "Copiar Código";
+          copyBtn.style.background = "var(--brand-primary)";
+        }, 2000);
+      }
+    }
+  });
+  
+  document.getElementById("btn-already-paid").addEventListener("click", () => {
+    showToast("Validando pagamento Pix seguro...");
+    setTimeout(() => {
+      formColumn.innerHTML = `
+        <div class="checkout-card pix-success-container" style="padding: 40px 20px;">
+          <div class="success-checkmark" style="background: rgba(34, 197, 94, 0.1); color: var(--success); width: 88px; height: 88px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+            <i data-lucide="shield-check" style="width: 48px; height: 48px;" aria-hidden="true"></i>
+          </div>
+          <h2 style="color: var(--brand-secondary); font-weight: 800; font-size: 1.8rem; margin-bottom: 12px;">Pagamento Confirmado!</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; max-width: 480px; margin: 0 auto 30px; line-height: 1.6;">
+            Seu pagamento foi aprovado com sucesso! Iniciamos o processamento e a embalagem prioritária do pedido <strong>#${orderNumber}</strong>. Você receberá atualizações no e-mail cadastrado.
+          </p>
+          <a class="primary-button" href="/" style="max-width: 280px; margin: 0 auto; display: block; text-decoration: none; padding: 14px 28px;">Voltar para o Início</a>
+        </div>
+      `;
+      iconRefresh();
+    }, 1500);
+  });
 }
 
 // INICIALIZAÇÃO
