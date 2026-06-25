@@ -923,27 +923,26 @@ function bindEvents() {
     checkoutBtn.addEventListener("click", handleCheckout);
   }
   
-  // Global Zoom closure
-  const zoomModal = document.querySelector("[data-zoom-modal]");
-  if (zoomModal) {
-    zoomModal.querySelectorAll("[data-zoom-close]").forEach(el => {
-      el.addEventListener("click", () => {
-        zoomModal.hidden = true;
-        document.body.classList.remove("zoom-open");
-      });
-    });
-  }
-  
-  // Global Size Guide closure
-  const sizeGuideModal = document.querySelector("[data-size-guide-modal]");
-  if (sizeGuideModal) {
-    sizeGuideModal.querySelectorAll("[data-size-guide-close]").forEach(el => {
-      el.addEventListener("click", () => {
+  // Global Modals closure using delegation
+  document.addEventListener("click", (e) => {
+    const sizeGuideClose = e.target.closest("[data-size-guide-close]");
+    if (sizeGuideClose) {
+      const sizeGuideModal = document.querySelector("[data-size-guide-modal]");
+      if (sizeGuideModal) {
         sizeGuideModal.hidden = true;
         document.body.classList.remove("size-guide-open");
-      });
-    });
-  }
+      }
+    }
+    
+    const zoomClose = e.target.closest("[data-zoom-close]");
+    if (zoomClose) {
+      const zoomModal = document.querySelector("[data-zoom-modal]");
+      if (zoomModal) {
+        zoomModal.hidden = true;
+        document.body.classList.remove("zoom-open");
+      }
+    }
+  });
   
   // Intercept click on anchors for SPA routing
   document.addEventListener("click", (e) => {

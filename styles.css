@@ -43,6 +43,12 @@
   --transition: all 0.2s ease-in-out;
 }
 
+[hidden],
+.zoom-modal[hidden],
+.size-guide-modal[hidden] {
+  display: none !important;
+}
+
 /* --- Resets --- */
 * {
   box-sizing: border-box;

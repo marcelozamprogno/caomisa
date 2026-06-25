@@ -283,10 +283,10 @@ fbq('track', 'PageView');
 
     <!-- Product Zoom Modal -->
     <div class="zoom-modal" data-zoom-modal hidden>
-      <div class="zoom-modal-backdrop" data-zoom-close></div>
+      <div class="zoom-modal-backdrop" data-zoom-close onclick="document.querySelector('[data-zoom-modal]').hidden = true; document.body.classList.remove('zoom-open');"></div>
       <div class="zoom-modal-content">
-        <button class="icon-button zoom-close-btn" type="button" data-zoom-close aria-label="Fechar zoom">
-          <i data-lucide="x" aria-hidden="true"></i>
+        <button class="icon-button zoom-close-btn" type="button" data-zoom-close aria-label="Fechar zoom" onclick="document.querySelector('[data-zoom-modal]').hidden = true; document.body.classList.remove('zoom-open');">
+          <i data-lucide="x" aria-hidden="true">&times;</i>
         </button>
         <img data-zoom-image src="" alt="Zoom do produto" />
       </div>
@@ -294,10 +294,10 @@ fbq('track', 'PageView');
 
     <!-- Size Guide Modal -->
     <div class="size-guide-modal" data-size-guide-modal hidden>
-      <div class="size-guide-backdrop" data-size-guide-close></div>
+      <div class="size-guide-backdrop" data-size-guide-close onclick="document.querySelector('[data-size-guide-modal]').hidden = true; document.body.classList.remove('size-guide-open');"></div>
       <div class="size-guide-content">
-        <button class="icon-button size-guide-close-btn" type="button" data-size-guide-close aria-label="Fechar guia">
-          <i data-lucide="x" aria-hidden="true"></i>
+        <button class="icon-button size-guide-close-btn" type="button" data-size-guide-close aria-label="Fechar guia" onclick="document.querySelector('[data-size-guide-modal]').hidden = true; document.body.classList.remove('size-guide-open');">
+          <i data-lucide="x" aria-hidden="true">&times;</i>
         </button>
         <h3>Guia de Medidas</h3>
         <p>Compare as medidas do seu pet com a tabela abaixo para escolher o tamanho correto:</p>
