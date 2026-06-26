@@ -1347,7 +1347,7 @@ async function handlePaymentSubmit() {
     return;
   }
   
-  showToast("Conectando com Invictus Pay para gerar o Pix...");
+  showToast("Gerando código PIX Copia e Cola e QR Code...");
   
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const pixDiscount = subtotal * 0.05;
