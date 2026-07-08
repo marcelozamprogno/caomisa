@@ -12,13 +12,13 @@
             "price": 19.90,
             "oldPrice": 39.90,
             "stock": 100,
-            "image": "assets/moletom-preto.webp",
+            "image": "/assets/moletom-preto.webp",
             "images": [
-                "assets/moletom-preto.webp",
-                "assets/moletom-branco.webp",
-                "assets/moletom-azul.webp",
-                "assets/moletom-vermelho.webp",
-                "assets/moletom-verde.webp"
+                "/assets/moletom-preto.webp",
+                "/assets/moletom-branco.webp",
+                "/assets/moletom-azul.webp",
+                "/assets/moletom-vermelho.webp",
+                "/assets/moletom-verde.webp"
             ],
             "sizes": ["PP", "P", "M", "G", "GG"],
             "colors": ["Preto", "Branco", "Azul", "Vermelho", "Verde"],
