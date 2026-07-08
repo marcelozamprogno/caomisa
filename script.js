@@ -686,7 +686,7 @@ function renderProductPage(slug) {
     const cartItem = {
       productId: product.id,
       name: product.name,
-      image: container.querySelector("[data-main-image]").src,
+      image: container.querySelector("#main-gallery-image").src,
       size: selectedSize,
       color: selectedColor,
       price: product.price,
