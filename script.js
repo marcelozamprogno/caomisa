@@ -442,6 +442,19 @@ function renderProductPage(slug) {
           </div>
         </div>
         
+        <!-- Color Selector -->
+        ${product.colors && product.colors.length ? `
+        <div class="option-selector-group" style="margin-top: 16px;">
+          <div class="option-selector-label">Cor</div>
+          <div class="color-options" style="display: flex; gap: 8px; flex-wrap: wrap;">
+            ${product.colors.map((color, idx) => `
+              <button type="button" class="color-pill ${idx === 0 ? "active" : ""}" data-color="${color}" style="padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 20px; background: ${idx === 0 ? 'var(--primary-color)' : 'transparent'}; color: ${idx === 0 ? '#fff' : 'var(--text-color)'}; cursor: pointer; font-weight: 500;">${color}</button>
+            `).join("")}
+          </div>
+        </div>
+        ` : ""}
+
+        
         <!-- Customization Fields -->
         ${isCustomizable ? `
           <div class="customization-box">
@@ -590,6 +603,28 @@ function renderProductPage(slug) {
     });
   });
   
+  // Color selection toggles
+  const colorPills = container.querySelectorAll(".color-pill");
+  colorPills.forEach((pill, idx) => {
+    pill.addEventListener("click", () => {
+      colorPills.forEach(p => {
+        p.classList.remove("active");
+        p.style.background = 'transparent';
+        p.style.color = 'var(--text-color)';
+      });
+      pill.classList.add("active");
+      pill.style.background = 'var(--primary-color)';
+      pill.style.color = '#fff';
+      
+      // Update main image if color matches gallery image index
+      if (galleryImages[idx]) {
+        mainImage.src = galleryImages[idx];
+        thumbs.forEach(t => t.classList.remove("is-active"));
+        if (thumbs[idx]) thumbs[idx].classList.add("is-active");
+      }
+    });
+  });
+  
   // Zoom Modal
   const zoomBtn = container.querySelector("[data-zoom-trigger]");
   const zoomModal = document.querySelector("[data-zoom-modal]");
@@ -627,11 +662,12 @@ function renderProductPage(slug) {
     qtyVal.textContent = q + 1;
   });
   
-  // Add to Cart Action
   const buyBtn = container.querySelector("[data-buy-now-button]");
   buyBtn.addEventListener("click", () => {
     const activeSizePill = container.querySelector(".size-pill.active");
     const selectedSize = activeSizePill ? activeSizePill.dataset.size : sizes[0];
+    const activeColorPill = container.querySelector(".color-pill.active");
+    const selectedColor = activeColorPill ? activeColorPill.dataset.color : (product.colors ? product.colors[0] : "");
     const qty = Number(qtyVal.textContent);
     
     let customName = "";
@@ -652,7 +688,7 @@ function renderProductPage(slug) {
       name: product.name,
       image: product.image,
       size: selectedSize,
-      color: "",
+      color: selectedColor,
       price: product.price,
       quantity: qty,
       customization: isCustomizable ? { name: customName, number: customNumber } : null
@@ -1326,13 +1362,20 @@ async function handlePaymentSubmit() {
   const cpf = document.getElementById("checkout-cpf")?.value.trim();
   const cep = document.getElementById("checkout-cep")?.value.trim();
   const street = document.getElementById("checkout-street")?.value.trim();
-  const number = document.getElementById("checkout-number")?.value.trim();
+  let number = document.getElementById("checkout-number")?.value.trim();
   const neighborhood = document.getElementById("checkout-neighborhood")?.value.trim();
   const city = document.getElementById("checkout-city")?.value.trim();
   const state = document.getElementById("checkout-state")?.value.trim();
   
   if (!name || !email || !phone || !cpf || !cep || !street || !number || !neighborhood || !city || !state) {
     showToast("Por favor, preencha todos os campos obrigatórios.");
+    return;
+  }
+  
+  if (number.toUpperCase() === "SN") {
+    number = "SN";
+  } else if (!/^\d+$/.test(number)) {
+    showToast("O número do endereço deve ser numérico ou 'SN' (Sem Número).");
     return;
   }
   

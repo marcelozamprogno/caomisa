@@ -65,7 +65,7 @@ class SPAMockRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Content-type", "application/json; charset=utf-8")
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
-        self.wfile.write(b'{"ok":true,"message":"Mocked API success"}')
+        self.wfile.write(b'{"ok":true,"success":true,"message":"Mocked API success","order_id":"123456789","qr_code_text":"00020126580014br.gov.bcb.pix0136..."}')
 
 print(f"==========================================================")
 print(f"   Local Web Server running successfully for Caomisa Shop")

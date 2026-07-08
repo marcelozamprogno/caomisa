@@ -75,7 +75,7 @@ while ($listener.IsListening) {
         }
         # Mock any review posts or checkout posts to avoid frontend error
         elseif ($localPath -like "/api/*") {
-            $responseBytes = [System.Text.Encoding]::UTF8.GetBytes('{"ok":true,"message":"Mocked API success"}')
+            $responseBytes = [System.Text.Encoding]::UTF8.GetBytes('{"ok":true,"success":true,"message":"Mocked API success","order_id":"123456789","qr_code_text":"00020126580014br.gov.bcb.pix0136..."}')
             $response.StatusCode = 200
             $response.ContentType = $mimeTypes[".json"]
             $response.ContentLength64 = $responseBytes.Length
