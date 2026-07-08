@@ -2,8 +2,130 @@
     "ok":  true,
     "source":  "yampi",
     "syncedAt":  "2026-06-05T21:13:54.393Z",
-    "count":  9,
+    "count":  10,
     "products":  [
+                     {
+                         "customization":  {
+                                               "enabled":  false
+                                           },
+                         "pageContentUpdatedAt":  "2026-07-08T00:00:00.000Z",
+                         "category":  "Inverno",
+                         "oldPrice":  39.9,
+                         "sizes":  [
+                                       "PP",
+                                       "P",
+                                       "M",
+                                       "G",
+                                       "GG"
+                                   ],
+                         "stock":  100,
+                         "premium":  {
+                                         "descriptionIntro":  "A magia no seu pet",
+                                         "soldCount":  "+120 vendidos",
+                                         "badgeText":  "Mágico",
+                                         "deliveryText":  "",
+                                         "reviews":  [
+
+                                                     ],
+                                         "rating":  5,
+                                         "descriptionBlocks":  [
+
+                                                               ],
+                                         "specs":  "",
+                                         "reviewCount":  0,
+                                         "descriptionTitle":  "Moletom Unicórnio"
+                                     },
+                         "image":  "/assets/moletom-unicornio-1.png",
+                         "homeSortOrder":  5,
+                         "id":  "moletom-unicornio",
+                         "description":  "Lindo moletom quentinho e super mágico de unicórnio! Ideal para seu pet arrasar no inverno.",
+                         "yampi":  {
+                                       "url":  "/produto/moletom-unicornio",
+                                       "productId":  "moletom-unicornio",
+                                       "skus":  [
+                                                    {
+                                                        "id":  "sku-unicornio-1",
+                                                        "sku":  "MOL-UNIC-PP",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "PP",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "PP"
+                                                    },
+                                                    {
+                                                        "id":  "sku-unicornio-2",
+                                                        "sku":  "MOL-UNIC-P",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "P",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "P"
+                                                    },
+                                                    {
+                                                        "id":  "sku-unicornio-3",
+                                                        "sku":  "MOL-UNIC-M",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "M",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "M"
+                                                    },
+                                                    {
+                                                        "id":  "sku-unicornio-4",
+                                                        "sku":  "MOL-UNIC-G",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "G",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "G"
+                                                    },
+                                                    {
+                                                        "id":  "sku-unicornio-5",
+                                                        "sku":  "MOL-UNIC-GG",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "GG",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "GG"
+                                                    }
+                                                ]
+                                   },
+                         "yampiProductId":  "moletom-unicornio",
+                         "colors":  [
+
+                                    ],
+                         "price":  19.9,
+                         "images":  [
+                                        "/assets/moletom-unicornio-1.png",
+                                        "/assets/moletom-unicornio-2.png"
+                                    ],
+                         "name":  "Moletom Com Capuz Unicórnio Fofo"
+                     },
                      {
                          "customization":  {
                                                "enabled":  false
