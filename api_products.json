@@ -2,8 +2,130 @@
     "ok":  true,
     "source":  "yampi",
     "syncedAt":  "2026-06-05T21:13:54.393Z",
-    "count":  7,
+    "count":  8,
     "products":  [
+                     {
+                         "customization":  {
+                                               "enabled":  false
+                                           },
+                         "pageContentUpdatedAt":  "2026-07-08T00:00:00.000Z",
+                         "category":  "Inverno",
+                         "oldPrice":  39.9,
+                         "sizes":  [
+                                       "PP",
+                                       "P",
+                                       "M",
+                                       "G",
+                                       "GG"
+                                   ],
+                         "stock":  100,
+                         "premium":  {
+                                         "descriptionIntro":  "A coisa mais fofa da selva",
+                                         "soldCount":  "+70 vendidos",
+                                         "badgeText":  "Selvagem",
+                                         "deliveryText":  "",
+                                         "reviews":  [
+
+                                                     ],
+                                         "rating":  5,
+                                         "descriptionBlocks":  [
+
+                                                               ],
+                                         "specs":  "",
+                                         "reviewCount":  0,
+                                         "descriptionTitle":  "Moletom Leão"
+                                     },
+                         "image":  "/assets/moletom-leao-1.png",
+                         "homeSortOrder":  3,
+                         "id":  "moletom-leao",
+                         "description":  "Lindo moletom quentinho e super fofo de leãozinho! Ideal para seu pet arrasar no inverno.",
+                         "yampi":  {
+                                       "url":  "/produto/moletom-leao",
+                                       "productId":  "moletom-leao",
+                                       "skus":  [
+                                                    {
+                                                        "id":  "sku-leao-1",
+                                                        "sku":  "MOL-LEAO-PP",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "PP",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "PP"
+                                                    },
+                                                    {
+                                                        "id":  "sku-leao-2",
+                                                        "sku":  "MOL-LEAO-P",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "P",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "P"
+                                                    },
+                                                    {
+                                                        "id":  "sku-leao-3",
+                                                        "sku":  "MOL-LEAO-M",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "M",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "M"
+                                                    },
+                                                    {
+                                                        "id":  "sku-leao-4",
+                                                        "sku":  "MOL-LEAO-G",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "G",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "G"
+                                                    },
+                                                    {
+                                                        "id":  "sku-leao-5",
+                                                        "sku":  "MOL-LEAO-GG",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "GG",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "GG"
+                                                    }
+                                                ]
+                                   },
+                         "yampiProductId":  "moletom-leao",
+                         "colors":  [
+
+                                    ],
+                         "price":  19.9,
+                         "images":  [
+                                        "/assets/moletom-leao-1.png",
+                                        "/assets/moletom-leao-2.png"
+                                    ],
+                         "name":  "Moletom Com Capuz Leão Fofo"
+                     },
                      {
                          "customization":  {
                                                "enabled":  false
