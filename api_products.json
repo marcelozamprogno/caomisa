@@ -2,76 +2,614 @@
     "ok":  true,
     "source":  "yampi",
     "syncedAt":  "2026-06-05T21:13:54.393Z",
-    "count":  6,
+    "count":  7,
     "products":  [
-        {
-            "id": "yampi-moletom-capuz",
-            "yampiProductId": "moletom-capuz",
-            "name": "Moletom Pet com Capuz",
-            "category": "Inverno",
-            "price": 19.90,
-            "oldPrice": 39.90,
-            "stock": 100,
-            "image": "/assets/moletom-preto.webp",
-            "images": [
-                "/assets/moletom-preto.webp",
-                "/assets/moletom-rosa.webp",
-                "/assets/moletom-azul.webp",
-                "/assets/moletom-vermelho.webp",
-                "/assets/moletom-verde.webp"
-            ],
-            "sizes": ["PP", "P", "M", "G", "GG"],
-            "colors": ["Preto", "Rosa", "Azul", "Vermelho", "Verde"],
-            "description": "Moletom Pet com Capuz – Conforto e Estilo para Todas as Estações!<br><br>Mantenha seu pet aquecido e estiloso com este moletom com capuz, ideal para dias frios ou passeios cheios de charme! Confeccionado em uma combinação macia e resistente de poliéster e algodão, o tecido proporciona conforto térmico sem abrir mão da leveza.<br><br>Disponível nas cores verde, vermelho, azul, rosa e preto, é uma peça versátil que combina com todos os estilos de pets — dos mais discretos aos mais fashionistas! O capuz dá um toque especial ao visual, além de ajudar a proteger do vento e do frio.<br><br>Praticidade garantida: pode ser lavado na máquina, facilitando o dia a dia sem comprometer a qualidade da peça.",
-            "customization": {
-                "enabled": false
-            },
-            "yampi": {
-                "productId": "moletom-capuz",
-                "url": "/produto/moletom-capuz",
-                "skus": [
-                    { "id": "sku-mol-1", "sku": "MOL-PP-PRT", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-2", "sku": "MOL-PP-BRC", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Rosa" }] },
-                    { "id": "sku-mol-3", "sku": "MOL-PP-AZL", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Azul" }] },
-                    { "id": "sku-mol-4", "sku": "MOL-PP-VRM", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Vermelho" }] },
-                    { "id": "sku-mol-5", "sku": "MOL-PP-VRD", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Verde" }] },
-                    { "id": "sku-mol-6", "sku": "MOL-P-PRT", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-7", "sku": "MOL-P-BRC", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Rosa" }] },
-                    { "id": "sku-mol-8", "sku": "MOL-P-AZL", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Azul" }] },
-                    { "id": "sku-mol-9", "sku": "MOL-P-VRM", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Vermelho" }] },
-                    { "id": "sku-mol-10", "sku": "MOL-P-VRD", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Verde" }] },
-                    { "id": "sku-mol-11", "sku": "MOL-M-PRT", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-12", "sku": "MOL-M-BRC", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Rosa" }] },
-                    { "id": "sku-mol-13", "sku": "MOL-M-AZL", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Azul" }] },
-                    { "id": "sku-mol-14", "sku": "MOL-M-VRM", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Vermelho" }] },
-                    { "id": "sku-mol-15", "sku": "MOL-M-VRD", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Verde" }] },
-                    { "id": "sku-mol-16", "sku": "MOL-G-PRT", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-17", "sku": "MOL-G-BRC", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Rosa" }] },
-                    { "id": "sku-mol-18", "sku": "MOL-G-AZL", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Azul" }] },
-                    { "id": "sku-mol-19", "sku": "MOL-G-VRM", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Vermelho" }] },
-                    { "id": "sku-mol-20", "sku": "MOL-G-VRD", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Verde" }] },
-                    { "id": "sku-mol-21", "sku": "MOL-GG-PRT", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-22", "sku": "MOL-GG-BRC", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Rosa" }] },
-                    { "id": "sku-mol-23", "sku": "MOL-GG-AZL", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Azul" }] },
-                    { "id": "sku-mol-24", "sku": "MOL-GG-VRM", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Vermelho" }] },
-                    { "id": "sku-mol-25", "sku": "MOL-GG-VRD", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Verde" }] }
-                ]
-            },
-            "premium": {
-                "soldCount": "+150 vendidos",
-                "rating": 5.0,
-                "reviewCount": 12,
-                "badgeText": "Novidade",
-                "deliveryText": "",
-                "descriptionTitle": "Moletom Pet com Capuz",
-                "descriptionIntro": "Mantenha seu pet aquecido e estiloso",
-                "descriptionBlocks": [],
-                "specs": "",
-                "reviews": []
-            },
-            "pageContentUpdatedAt": "2026-07-08T00:00:00.000Z",
-            "homeSortOrder": 0
-        },
+                     {
+                         "customization":  {
+                                               "enabled":  false
+                                           },
+                         "pageContentUpdatedAt":  "2026-07-08T00:00:00.000Z",
+                         "category":  "Inverno",
+                         "oldPrice":  39.9,
+                         "sizes":  [
+                                       "PP",
+                                       "P",
+                                       "M",
+                                       "G",
+                                       "GG"
+                                   ],
+                         "stock":  100,
+                         "premium":  {
+                                         "descriptionIntro":  "A coisa mais fofa",
+                                         "soldCount":  "+50 vendidos",
+                                         "badgeText":  "Fofura",
+                                         "deliveryText":  "",
+                                         "reviews":  [
+
+                                                     ],
+                                         "rating":  5,
+                                         "descriptionBlocks":  [
+
+                                                               ],
+                                         "specs":  "",
+                                         "reviewCount":  0,
+                                         "descriptionTitle":  "Moletom Porco"
+                                     },
+                         "image":  "/assets/moletom-porco-1.png",
+                         "homeSortOrder":  2,
+                         "id":  "moletom-porco",
+                         "description":  "Lindo moletom quentinho e super fofo com orelhas e focinho! Ideal para seu pet arrasar no inverno.",
+                         "yampi":  {
+                                       "url":  "/produto/moletom-porco",
+                                       "productId":  "moletom-porco",
+                                       "skus":  [
+                                                    {
+                                                        "id":  "sku-porco-1",
+                                                        "sku":  "MOL-PORC-PP",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "PP",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "PP"
+                                                    },
+                                                    {
+                                                        "id":  "sku-porco-2",
+                                                        "sku":  "MOL-PORC-P",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "P",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "P"
+                                                    },
+                                                    {
+                                                        "id":  "sku-porco-3",
+                                                        "sku":  "MOL-PORC-M",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "M",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "M"
+                                                    },
+                                                    {
+                                                        "id":  "sku-porco-4",
+                                                        "sku":  "MOL-PORC-G",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "G",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "G"
+                                                    },
+                                                    {
+                                                        "id":  "sku-porco-5",
+                                                        "sku":  "MOL-PORC-GG",
+                                                        "variations":  [
+                                                                           {
+                                                                               "value":  "GG",
+                                                                               "name":  "Tamanho"
+                                                                           }
+                                                                       ],
+                                                        "price":  19.9,
+                                                        "purchaseUrl":  "https://wa.me/5511999999999",
+                                                        "oldPrice":  39.9,
+                                                        "size":  "GG"
+                                                    }
+                                                ]
+                                   },
+                         "yampiProductId":  "moletom-porco",
+                         "colors":  [
+
+                                    ],
+                         "price":  19.9,
+                         "images":  [
+                                        "/assets/moletom-porco-1.png",
+                                        "/assets/moletom-porco-2.png"
+                                    ],
+                         "name":  "Moletom Com Capuz Focinho de Porco Fofo"
+                     },
+                     {
+                         "id":  "yampi-moletom-capuz",
+                         "yampiProductId":  "moletom-capuz",
+                         "name":  "Moletom Pet com Capuz",
+                         "category":  "Inverno",
+                         "price":  19.90,
+                         "oldPrice":  39.90,
+                         "stock":  100,
+                         "image":  "/assets/moletom-preto.webp",
+                         "images":  [
+                                        "/assets/moletom-preto.webp",
+                                        "/assets/moletom-rosa.webp",
+                                        "/assets/moletom-azul.webp",
+                                        "/assets/moletom-vermelho.webp",
+                                        "/assets/moletom-verde.webp"
+                                    ],
+                         "sizes":  [
+                                       "PP",
+                                       "P",
+                                       "M",
+                                       "G",
+                                       "GG"
+                                   ],
+                         "colors":  [
+                                        "Preto",
+                                        "Rosa",
+                                        "Azul",
+                                        "Vermelho",
+                                        "Verde"
+                                    ],
+                         "description":  "Moletom Pet com Capuz – Conforto e Estilo para Todas as Estações!\u003cbr\u003e\u003cbr\u003eMantenha seu pet aquecido e estiloso com este moletom com capuz, ideal para dias frios ou passeios cheios de charme! Confeccionado em uma combinação macia e resistente de poliéster e algodão, o tecido proporciona conforto térmico sem abrir mão da leveza.\u003cbr\u003e\u003cbr\u003eDisponível nas cores verde, vermelho, azul, rosa e preto, é uma peça versátil que combina com todos os estilos de pets — dos mais discretos aos mais fashionistas! O capuz dá um toque especial ao visual, além de ajudar a proteger do vento e do frio.\u003cbr\u003e\u003cbr\u003ePraticidade garantida: pode ser lavado na máquina, facilitando o dia a dia sem comprometer a qualidade da peça.",
+                         "customization":  {
+                                               "enabled":  false
+                                           },
+                         "yampi":  {
+                                       "productId":  "moletom-capuz",
+                                       "url":  "/produto/moletom-capuz",
+                                       "skus":  [
+                                                    {
+                                                        "id":  "sku-mol-1",
+                                                        "sku":  "MOL-PP-PRT",
+                                                        "size":  "PP",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "PP"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Preto"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-2",
+                                                        "sku":  "MOL-PP-BRC",
+                                                        "size":  "PP",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "PP"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Rosa"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-3",
+                                                        "sku":  "MOL-PP-AZL",
+                                                        "size":  "PP",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "PP"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Azul"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-4",
+                                                        "sku":  "MOL-PP-VRM",
+                                                        "size":  "PP",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "PP"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Vermelho"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-5",
+                                                        "sku":  "MOL-PP-VRD",
+                                                        "size":  "PP",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "PP"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Verde"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-6",
+                                                        "sku":  "MOL-P-PRT",
+                                                        "size":  "P",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "P"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Preto"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-7",
+                                                        "sku":  "MOL-P-BRC",
+                                                        "size":  "P",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "P"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Rosa"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-8",
+                                                        "sku":  "MOL-P-AZL",
+                                                        "size":  "P",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "P"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Azul"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-9",
+                                                        "sku":  "MOL-P-VRM",
+                                                        "size":  "P",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "P"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Vermelho"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-10",
+                                                        "sku":  "MOL-P-VRD",
+                                                        "size":  "P",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "P"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Verde"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-11",
+                                                        "sku":  "MOL-M-PRT",
+                                                        "size":  "M",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "M"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Preto"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-12",
+                                                        "sku":  "MOL-M-BRC",
+                                                        "size":  "M",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "M"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Rosa"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-13",
+                                                        "sku":  "MOL-M-AZL",
+                                                        "size":  "M",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "M"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Azul"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-14",
+                                                        "sku":  "MOL-M-VRM",
+                                                        "size":  "M",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "M"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Vermelho"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-15",
+                                                        "sku":  "MOL-M-VRD",
+                                                        "size":  "M",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "M"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Verde"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-16",
+                                                        "sku":  "MOL-G-PRT",
+                                                        "size":  "G",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "G"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Preto"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-17",
+                                                        "sku":  "MOL-G-BRC",
+                                                        "size":  "G",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "G"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Rosa"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-18",
+                                                        "sku":  "MOL-G-AZL",
+                                                        "size":  "G",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "G"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Azul"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-19",
+                                                        "sku":  "MOL-G-VRM",
+                                                        "size":  "G",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "G"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Vermelho"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-20",
+                                                        "sku":  "MOL-G-VRD",
+                                                        "size":  "G",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "G"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Verde"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-21",
+                                                        "sku":  "MOL-GG-PRT",
+                                                        "size":  "GG",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "GG"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Preto"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-22",
+                                                        "sku":  "MOL-GG-BRC",
+                                                        "size":  "GG",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "GG"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Rosa"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-23",
+                                                        "sku":  "MOL-GG-AZL",
+                                                        "size":  "GG",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "GG"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Azul"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-24",
+                                                        "sku":  "MOL-GG-VRM",
+                                                        "size":  "GG",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "GG"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Vermelho"
+                                                                           }
+                                                                       ]
+                                                    },
+                                                    {
+                                                        "id":  "sku-mol-25",
+                                                        "sku":  "MOL-GG-VRD",
+                                                        "size":  "GG",
+                                                        "price":  19.90,
+                                                        "oldPrice":  39.90,
+                                                        "variations":  [
+                                                                           {
+                                                                               "name":  "Tamanho",
+                                                                               "value":  "GG"
+                                                                           },
+                                                                           {
+                                                                               "name":  "Cor",
+                                                                               "value":  "Verde"
+                                                                           }
+                                                                       ]
+                                                    }
+                                                ]
+                                   },
+                         "premium":  {
+                                         "soldCount":  "+150 vendidos",
+                                         "rating":  5.0,
+                                         "reviewCount":  12,
+                                         "badgeText":  "Novidade",
+                                         "deliveryText":  "",
+                                         "descriptionTitle":  "Moletom Pet com Capuz",
+                                         "descriptionIntro":  "Mantenha seu pet aquecido e estiloso",
+                                         "descriptionBlocks":  [
+
+                                                               ],
+                                         "specs":  "",
+                                         "reviews":  [
+
+                                                     ]
+                                     },
+                         "pageContentUpdatedAt":  "2026-07-08T00:00:00.000Z",
+                         "homeSortOrder":  0
+                     },
                      {
                          "id":  "yampi-caomisa-brasil-classica-45171387",
                          "yampiProductId":  "45171387",
