@@ -826,6 +826,14 @@ function handleCheckout() {
     return;
   }
   
+  trackMetaEvent('InitiateCheckout', {
+    custom_data: {
+      currency: 'BRL',
+      value: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+      content_ids: cart.map(i => i.sku)
+    }
+  });
+  
   closeCartDrawer();
   navigate("/checkout");
 }
@@ -1413,6 +1421,23 @@ async function handlePaymentSubmit() {
 
   const formColumn = document.querySelector(".checkout-form-column");
   if (!formColumn) return;
+  
+  trackMetaEvent('AddPaymentInfo', {
+    custom_data: {
+      currency: 'BRL',
+      value: total,
+      payment_type: 'pix'
+    },
+    user_data: {
+      em: email,
+      ph: phone,
+      fn: name.split(' ')[0],
+      ln: name.split(' ').slice(1).join(' '),
+      ct: city,
+      st: state,
+      zp: cep
+    }
+  });
 
   try {
     const response = await fetch('/api/pix', {
@@ -1437,6 +1462,27 @@ async function handlePaymentSubmit() {
 
     const orderNumber = data.order_id;
     const pixKey = data.qr_code_text || "Chave PIX não retornada";
+    
+    trackMetaEvent('Purchase', {
+      custom_data: {
+        currency: 'BRL',
+        value: total,
+        content_ids: cart.map(i => i.sku)
+      },
+      user_data: {
+        em: email,
+        ph: phone,
+        fn: name.split(' ')[0],
+        ln: name.split(' ').slice(1).join(' '),
+        ct: city,
+        st: state,
+        zp: cep
+      }
+    });
+    
+    cart = [];
+    saveCart();
+    
     const qrCodeImage = data.qr_code_base64 
       ? `<img src="${data.qr_code_base64}" alt="QR Code Pix" style="max-width: 100%; border-radius: 8px;">`
       : `<svg id="pix-qr-svg" width="200" height="200" viewBox="0 0 29 29" shape-rendering="crispEdges"></svg>`;
