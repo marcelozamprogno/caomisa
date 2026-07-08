@@ -698,6 +698,7 @@ function renderProductPage(slug) {
     const matchIdx = cart.findIndex(item => 
       item.productId === cartItem.productId && 
       item.size === cartItem.size &&
+      item.color === cartItem.color &&
       (!isCustomizable || (item.customization?.name === customName && item.customization?.number === customNumber))
     );
     
