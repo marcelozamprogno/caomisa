@@ -686,7 +686,7 @@ function renderProductPage(slug) {
     const cartItem = {
       productId: product.id,
       name: product.name,
-      image: product.image,
+      image: container.querySelector("[data-main-image]").src,
       size: selectedSize,
       color: selectedColor,
       price: product.price,
@@ -739,9 +739,9 @@ function renderCart() {
   }
   
   itemsContainer.innerHTML = cart.map((item, idx) => {
-    const metaStr = item.customization 
-      ? `Tamanho: ${item.size} | Nome: <strong>${item.customization.name}</strong> | Nº: <strong>${item.customization.number}</strong>`
-      : `Tamanho: ${item.size}`;
+    let metaStr = `Tamanho: ${item.size}`;
+    if (item.color) metaStr += ` | Cor: ${item.color}`;
+    if (item.customization) metaStr += ` | Nome: <strong>${item.customization.name}</strong> | Nº: <strong>${item.customization.number}</strong>`;
       
     return `
       <div class="cart-item">
@@ -1129,9 +1129,9 @@ function renderCheckout() {
   }
   
   checkoutItemsContainer.innerHTML = cart.map((item) => {
-    const metaStr = item.customization 
-      ? `Tamanho: ${item.size} | Nome: <strong>${item.customization.name}</strong> | Nº: <strong>${item.customization.number}</strong>`
-      : `Tamanho: ${item.size}`;
+    let metaStr = `Tamanho: ${item.size}`;
+    if (item.color) metaStr += ` | Cor: ${item.color}`;
+    if (item.customization) metaStr += ` | Nome: <strong>${item.customization.name}</strong> | Nº: <strong>${item.customization.number}</strong>`;
       
     return `
       <div class="checkout-item-row">
