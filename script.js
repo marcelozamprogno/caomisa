@@ -708,6 +708,15 @@ function renderProductPage(slug) {
       cart.push(cartItem);
     }
     
+    trackMetaEvent('AddToCart', {
+      custom_data: {
+        content_ids: [cartItem.sku],
+        content_name: cartItem.name,
+        currency: 'BRL',
+        value: cartItem.price * qty
+      }
+    });
+    
     saveCart();
     showToast("Produto adicionado à sacola!");
     openCartDrawer();
@@ -1540,3 +1549,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   setupHeaderCategoryMenu();
   route();
 });
+
+// --- Tracking Meta Events (Frontend + CAPI) ---
+function trackMetaEvent(eventName, eventData = {}) {
+  if (window.fbq) { window.fbq('track', eventName, eventData.custom_data || {}); }
+  fetch('/api/meta_capi', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_name: eventName,
+      custom_data: eventData.custom_data || {},
+      user_data: eventData.user_data || {},
+      event_source_url: window.location.href
+    })
+  }).catch(e => console.error('CAPI fetch error:', e));
+}
