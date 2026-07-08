@@ -448,7 +448,7 @@ function renderProductPage(slug) {
           <div class="option-selector-label">Cor</div>
           <div class="color-options" style="display: flex; gap: 8px; flex-wrap: wrap;">
             ${product.colors.map((color, idx) => `
-              <button type="button" class="color-pill ${idx === 0 ? "active" : ""}" data-color="${color}" style="padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 20px; background: ${idx === 0 ? 'var(--primary-color)' : 'transparent'}; color: ${idx === 0 ? '#fff' : 'var(--text-color)'}; cursor: pointer; font-weight: 500;">${color}</button>
+              <button type="button" class="color-pill ${idx === 0 ? "active" : ""}" data-color="${color}" style="padding: 8px 16px; border: 1px solid var(--line); border-radius: 20px; background: ${idx === 0 ? 'var(--brand-primary)' : 'transparent'}; color: ${idx === 0 ? '#000' : 'var(--text-main)'}; cursor: pointer; font-weight: 500;">${color}</button>
             `).join("")}
           </div>
         </div>
@@ -610,11 +610,11 @@ function renderProductPage(slug) {
       colorPills.forEach(p => {
         p.classList.remove("active");
         p.style.background = 'transparent';
-        p.style.color = 'var(--text-color)';
+        p.style.color = 'var(--text-main)';
       });
       pill.classList.add("active");
-      pill.style.background = 'var(--primary-color)';
-      pill.style.color = '#fff';
+      pill.style.background = 'var(--brand-primary)';
+      pill.style.color = '#000';
       
       // Update main image if color matches gallery image index
       if (galleryImages[idx]) {

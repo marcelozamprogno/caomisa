@@ -1,4 +1,4 @@
-{
+﻿{
     "ok":  true,
     "source":  "yampi",
     "syncedAt":  "2026-06-05T21:13:54.393Z",
@@ -15,14 +15,14 @@
             "image": "/assets/moletom-preto.webp",
             "images": [
                 "/assets/moletom-preto.webp",
-                "/assets/moletom-branco.webp",
+                "/assets/moletom-rosa.webp",
                 "/assets/moletom-azul.webp",
                 "/assets/moletom-vermelho.webp",
                 "/assets/moletom-verde.webp"
             ],
             "sizes": ["PP", "P", "M", "G", "GG"],
-            "colors": ["Preto", "Branco", "Azul", "Vermelho", "Verde"],
-            "description": "Moletom Pet com Capuz – Conforto e Estilo para Todas as Estações!<br><br>Mantenha seu pet aquecido e estiloso com este moletom com capuz, ideal para dias frios ou passeios cheios de charme! Confeccionado em uma combinação macia e resistente de poliéster e algodão, o tecido proporciona conforto térmico sem abrir mão da leveza.<br><br>Disponível nas cores verde, vermelho, azul, branco e preto, é uma peça versátil que combina com todos os estilos de pets — dos mais discretos aos mais fashionistas! O capuz dá um toque especial ao visual, além de ajudar a proteger do vento e do frio.<br><br>Praticidade garantida: pode ser lavado na máquina, facilitando o dia a dia sem comprometer a qualidade da peça.",
+            "colors": ["Preto", "Rosa", "Azul", "Vermelho", "Verde"],
+            "description": "Moletom Pet com Capuz – Conforto e Estilo para Todas as Estações!<br><br>Mantenha seu pet aquecido e estiloso com este moletom com capuz, ideal para dias frios ou passeios cheios de charme! Confeccionado em uma combinação macia e resistente de poliéster e algodão, o tecido proporciona conforto térmico sem abrir mão da leveza.<br><br>Disponível nas cores verde, vermelho, azul, rosa e preto, é uma peça versátil que combina com todos os estilos de pets — dos mais discretos aos mais fashionistas! O capuz dá um toque especial ao visual, além de ajudar a proteger do vento e do frio.<br><br>Praticidade garantida: pode ser lavado na máquina, facilitando o dia a dia sem comprometer a qualidade da peça.",
             "customization": {
                 "enabled": false
             },
@@ -31,27 +31,27 @@
                 "url": "/produto/moletom-capuz",
                 "skus": [
                     { "id": "sku-mol-1", "sku": "MOL-PP-PRT", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-2", "sku": "MOL-PP-BRC", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Branco" }] },
+                    { "id": "sku-mol-2", "sku": "MOL-PP-BRC", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Rosa" }] },
                     { "id": "sku-mol-3", "sku": "MOL-PP-AZL", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Azul" }] },
                     { "id": "sku-mol-4", "sku": "MOL-PP-VRM", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Vermelho" }] },
                     { "id": "sku-mol-5", "sku": "MOL-PP-VRD", "size": "PP", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "PP" }, { "name": "Cor", "value": "Verde" }] },
                     { "id": "sku-mol-6", "sku": "MOL-P-PRT", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-7", "sku": "MOL-P-BRC", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Branco" }] },
+                    { "id": "sku-mol-7", "sku": "MOL-P-BRC", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Rosa" }] },
                     { "id": "sku-mol-8", "sku": "MOL-P-AZL", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Azul" }] },
                     { "id": "sku-mol-9", "sku": "MOL-P-VRM", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Vermelho" }] },
                     { "id": "sku-mol-10", "sku": "MOL-P-VRD", "size": "P", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "P" }, { "name": "Cor", "value": "Verde" }] },
                     { "id": "sku-mol-11", "sku": "MOL-M-PRT", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-12", "sku": "MOL-M-BRC", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Branco" }] },
+                    { "id": "sku-mol-12", "sku": "MOL-M-BRC", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Rosa" }] },
                     { "id": "sku-mol-13", "sku": "MOL-M-AZL", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Azul" }] },
                     { "id": "sku-mol-14", "sku": "MOL-M-VRM", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Vermelho" }] },
                     { "id": "sku-mol-15", "sku": "MOL-M-VRD", "size": "M", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "M" }, { "name": "Cor", "value": "Verde" }] },
                     { "id": "sku-mol-16", "sku": "MOL-G-PRT", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-17", "sku": "MOL-G-BRC", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Branco" }] },
+                    { "id": "sku-mol-17", "sku": "MOL-G-BRC", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Rosa" }] },
                     { "id": "sku-mol-18", "sku": "MOL-G-AZL", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Azul" }] },
                     { "id": "sku-mol-19", "sku": "MOL-G-VRM", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Vermelho" }] },
                     { "id": "sku-mol-20", "sku": "MOL-G-VRD", "size": "G", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "G" }, { "name": "Cor", "value": "Verde" }] },
                     { "id": "sku-mol-21", "sku": "MOL-GG-PRT", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Preto" }] },
-                    { "id": "sku-mol-22", "sku": "MOL-GG-BRC", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Branco" }] },
+                    { "id": "sku-mol-22", "sku": "MOL-GG-BRC", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Rosa" }] },
                     { "id": "sku-mol-23", "sku": "MOL-GG-AZL", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Azul" }] },
                     { "id": "sku-mol-24", "sku": "MOL-GG-VRM", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Vermelho" }] },
                     { "id": "sku-mol-25", "sku": "MOL-GG-VRD", "size": "GG", "price": 19.90, "oldPrice": 39.90, "variations": [{ "name": "Tamanho", "value": "GG" }, { "name": "Cor", "value": "Verde" }] }
